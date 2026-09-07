@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mentoria Worklife</title>
-<meta name="description" content="Mentoria Worklife para donos de negócio que não separam vida pessoal e profissional.">
+<title>Sessão Estratégica Individual</title>
+<meta name="description" content="Sessão Estratégica Individual com Fred Candiota: 90 minutos pra destravar uma decisão importante do seu negócio e sair com um plano de ação claro.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,10 +44,6 @@
     max-width:1120px;
     margin:0 auto;
     padding:0 clamp(20px, 5vw, 64px);
-  }
-
-  .prose{
-    max-width:640px;
   }
 
   .eyebrow{
@@ -165,7 +161,7 @@
     justify-content:center;
     align-self:center;
   }
-  .hero-mark svg{width:100%;max-width:560px;height:auto;}
+  .hero-mark svg{width:100%;max-width:480px;height:auto;}
 
   .hero-actions{
     margin-top:34px;
@@ -190,22 +186,15 @@
     50%{transform:translateY(4px);}
   }
 
-  /* ---------- SECTION 2 ---------- */
-  .porque{
+  /* ---------- SECTION: O PROBLEMA ---------- */
+  .problema{
     background:var(--surface);
     border-top:1px solid var(--line);
     border-bottom:1px solid var(--line);
   }
-  .porque .wrap{
-    display:grid;
-    grid-template-columns:0.85fr 1.15fr;
-    gap:clamp(36px, 6vw, 80px);
-    align-items:center;
-  }
-  .porque-diagram{display:flex;justify-content:center;}
-  .porque-diagram svg{width:100%;max-width:340px;height:auto;}
-  .porque-copy p + p{margin-top:16px;}
-  .porque-copy .callout{
+  .problema .wrap{max-width:800px;}
+  .problema p + p{margin-top:16px;}
+  .problema .callout{
     margin-top:26px;
     padding-left:18px;
     border-left:3px solid var(--accent);
@@ -214,125 +203,36 @@
     color:var(--ink);
   }
 
-  /* ---------- SECTION 3: ENTREGAVEIS ---------- */
-  .entregaveis-head{
+  /* ---------- SECTION: TEMAS ---------- */
+  .temas-row{
     display:flex;
     flex-wrap:wrap;
-    justify-content:space-between;
-    align-items:flex-end;
-    gap:24px;
-    margin-bottom:48px;
+    gap:14px;
+    margin-bottom:24px;
   }
-  .meta-pill{
-    display:inline-flex;
+  .tema-item{
+    display:flex;
     align-items:center;
-    gap:8px;
-    font-size:0.85rem;
-    font-weight:500;
-    color:var(--ink-soft);
-    background:var(--surface);
+    gap:12px;
+    padding:14px 20px 14px 14px;
     border:1px solid var(--line);
-    padding:9px 16px;
-    border-radius:999px;
-  }
-  .meta-pill svg{width:15px;height:15px;color:var(--accent-deep);stroke:currentColor;}
-
-  .cards{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:20px;
-  }
-  .card{
-    border:1px solid var(--line);
-    border-radius:18px;
-    padding:30px 28px;
+    border-radius:14px;
     background:#fff;
-    transition:border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+    font-weight:600;
+    font-size:0.98rem;
   }
-  .card:hover{
-    border-color:var(--accent);
-    transform:translateY(-3px);
-    box-shadow:0 16px 32px -22px rgba(26,21,18,0.35);
-  }
-  .card-icon{
-    width:44px;height:44px;
-    border-radius:12px;
+  .tema-item .icon{
+    width:34px;height:34px;
+    border-radius:10px;
     background:var(--accent-tint);
     color:var(--accent-deep);
     display:flex;align-items:center;justify-content:center;
-    margin-bottom:18px;
-  }
-  .card-icon svg{width:22px;height:22px;}
-  .card h3{
-    font-size:1.08rem;
-    font-weight:600;
-    margin-bottom:8px;
-  }
-  .card p{
-    font-size:0.94rem;
-    color:var(--ink-soft);
-  }
-
-  /* ---------- SECTION: ASSUNTOS ---------- */
-  .assuntos{
-    background:var(--surface);
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-  }
-  .assuntos-head{
-    max-width:640px;
-    margin-bottom:48px;
-  }
-  .assuntos-head .lede{margin-top:16px;}
-  .assuntos-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:clamp(32px, 6vw, 72px);
-  }
-  .assuntos-label{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-size:12.5px;
-    font-weight:700;
-    letter-spacing:0.1em;
-    text-transform:uppercase;
-    margin-bottom:22px;
-  }
-  .assuntos-label .dot{width:9px;height:9px;border-radius:50%;flex:none;}
-  .assuntos-col.is-pessoal .assuntos-label{color:var(--ink-soft);}
-  .assuntos-col.is-pessoal .assuntos-label .dot{background:var(--ink-soft);}
-  .assuntos-col.is-profissional .assuntos-label{color:var(--accent-deep);}
-  .assuntos-col.is-profissional .assuntos-label .dot{background:var(--accent);}
-  .topic-list{
-    list-style:none;
-    margin:0;
-    padding:0;
-    display:flex;
-    flex-direction:column;
-  }
-  .topic-list li{
-    display:flex;
-    align-items:baseline;
-    gap:14px;
-    padding:16px 0;
-    border-bottom:1px solid var(--line);
-    font-size:1.02rem;
-    color:var(--ink);
-  }
-  .topic-list li:first-child{padding-top:0;}
-  .topic-list .n{
-    font-family:var(--font);
-    font-size:0.85rem;
-    font-weight:700;
-    color:var(--ink-soft);
     flex:none;
-    width:22px;
   }
-  .assuntos-col.is-profissional .topic-list .n{color:var(--accent-deep);}
+  .tema-item .icon svg{width:17px;height:17px;}
 
-  .bonus{
-    margin-top:20px;
+  .ia-panel{
+    margin-top:8px;
     display:flex;
     gap:22px;
     align-items:flex-start;
@@ -341,7 +241,7 @@
     border-radius:18px;
     padding:28px 30px;
   }
-  .bonus-icon{
+  .ia-panel-icon{
     flex:none;
     width:48px;height:48px;
     border-radius:12px;
@@ -349,8 +249,8 @@
     color:#fff;
     display:flex;align-items:center;justify-content:center;
   }
-  .bonus-icon svg{width:24px;height:24px;}
-  .bonus-tag{
+  .ia-panel-icon svg{width:24px;height:24px;}
+  .ia-panel-tag{
     display:inline-block;
     font-size:12px;
     font-weight:700;
@@ -359,17 +259,97 @@
     color:var(--accent-deep);
     margin-bottom:8px;
   }
-  .bonus h3{
+  .ia-panel h3{
     font-size:1.1rem;
     font-weight:600;
     margin-bottom:8px;
   }
-  .bonus p{
+  .ia-panel p{
     font-size:0.96rem;
     color:var(--ink-soft);
   }
+  .ia-panel p + p{margin-top:10px;}
 
-  /* ---------- SECTION 4: PARA QUEM ---------- */
+  /* ---------- SECTION: COMO FUNCIONA ---------- */
+  .como-funciona{
+    background:var(--surface);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .como-funciona-head{
+    max-width:640px;
+    margin-bottom:44px;
+  }
+  .como-funciona-head .lede{margin-top:16px;}
+  .steps-list{
+    display:flex;
+    flex-direction:column;
+  }
+  .step{
+    display:grid;
+    grid-template-columns:72px 1fr;
+    gap:24px;
+    padding:28px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .step:first-child{padding-top:0;}
+  .step:last-child{border-bottom:none;padding-bottom:0;}
+  .step-num{
+    font-size:2.1rem;
+    font-weight:800;
+    color:var(--accent);
+    opacity:0.45;
+    line-height:1;
+    font-variant-numeric:tabular-nums;
+  }
+  .step h3{
+    font-size:1.12rem;
+    font-weight:600;
+    margin-bottom:8px;
+  }
+  .step p{
+    font-size:0.98rem;
+    color:var(--ink-soft);
+  }
+  .step p + p{margin-top:10px;}
+
+  /* ---------- SECTION: OBJETIVO ---------- */
+  .objetivo .wrap{max-width:1000px;}
+  .objetivo-intro{max-width:720px;}
+  .objetivo-intro p + p{margin-top:14px;}
+  .objetivo-sub{
+    margin-top:38px;
+    margin-bottom:22px;
+    font-weight:600;
+    font-size:1.05rem;
+  }
+  .quotes-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:16px;
+  }
+  .quote-card{
+    padding:22px 22px 20px;
+    border:1px solid var(--line);
+    border-radius:14px;
+    background:#fff;
+  }
+  .quote-card .mark{
+    font-size:1.8rem;
+    font-weight:800;
+    color:var(--accent);
+    line-height:1;
+    display:block;
+    margin-bottom:6px;
+  }
+  .quote-card p{
+    font-size:0.92rem;
+    font-style:italic;
+    color:var(--ink);
+    line-height:1.5;
+  }
+
+  /* ---------- SECTION: PARA QUEM ---------- */
   .para-quem{
     background:var(--surface);
     border-top:1px solid var(--line);
@@ -405,20 +385,55 @@
     margin-top:2px;
   }
   .persona-list .tick svg{width:13px;height:13px;}
-  .not-for{
+  .highlight-box{
     margin-top:36px;
     padding:32px 30px;
     background:var(--accent-tint);
     border-left:4px solid var(--accent);
     border-radius:4px 16px 16px 4px;
-    font-size:clamp(1.05rem, 1.6vw, 1.3rem);
+    font-size:clamp(1.1rem, 1.8vw, 1.4rem);
     line-height:1.45;
-    font-weight:500;
+    font-weight:600;
     color:var(--ink);
   }
-  .not-for strong{color:var(--accent-deep);font-weight:700;}
 
-  /* ---------- SECTION 5: CTA FINAL ---------- */
+  /* ---------- SECTION: DETALHES + CTA FINAL ---------- */
+  .detalhes-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:16px;
+    margin-bottom:48px;
+  }
+  .detalhe{
+    padding:24px;
+    border:1px solid var(--line);
+    border-radius:14px;
+    text-align:center;
+  }
+  .detalhe .icon{
+    width:40px;height:40px;
+    margin:0 auto 14px;
+    border-radius:10px;
+    background:var(--accent-tint);
+    color:var(--accent-deep);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .detalhe .icon svg{width:20px;height:20px;}
+  .detalhe .label{
+    display:block;
+    font-size:11.5px;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:6px;
+  }
+  .detalhe .value{
+    font-size:1rem;
+    font-weight:600;
+    color:var(--ink);
+  }
+
   .cta-final{
     text-align:center;
   }
@@ -432,7 +447,7 @@
   }
   .cta-final .lede{
     margin-top:16px;
-    max-width:480px;
+    max-width:520px;
   }
   .cta-final .btn{
     margin-top:34px;
@@ -485,21 +500,15 @@
     .hero{padding-top:24px;padding-bottom:36px;}
     .hero .wrap{grid-template-columns:1fr;}
     .hero-mark{margin-top:8px;}
-    .hero-mark svg{max-width:280px;}
-    .porque .wrap{grid-template-columns:1fr;gap:24px;}
-    .porque-diagram{margin-bottom:4px;}
-    .porque-diagram svg{max-width:220px;}
-    .para-quem .wrap{grid-template-columns:1fr;gap:32px;}
-    .cards{grid-template-columns:1fr;}
-    .assuntos-head{margin-bottom:28px;}
-    .assuntos-grid{grid-template-columns:1fr;gap:28px;}
-    .topic-list li{padding:11px 0;font-size:0.96rem;}
-    .entregaveis-head{align-items:flex-start;margin-bottom:32px;}
-    .meta-pill{border-radius:16px;align-items:flex-start;}
-    .card{padding:24px 22px;}
-    .bonus{flex-direction:column;padding:22px 24px;}
-    .not-for{padding:24px 22px;}
+    .hero-mark svg{max-width:320px;}
     .hero-actions{flex-direction:column;align-items:flex-start;}
+    .como-funciona-head{margin-bottom:28px;}
+    .step{grid-template-columns:48px 1fr;gap:16px;padding:22px 0;}
+    .step-num{font-size:1.6rem;}
+    .quotes-grid{grid-template-columns:1fr;}
+    .para-quem .wrap{grid-template-columns:1fr;gap:32px;}
+    .detalhes-grid{grid-template-columns:1fr;gap:12px;}
+    .highlight-box{padding:24px 22px;}
   }
 </style>
 </head>
@@ -507,191 +516,176 @@
 
 <header class="wrap" style="padding-top:32px; display:flex; align-items:center; justify-content:space-between;">
   <div class="brand-mark">
-    <svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="12" r="7" stroke="currentColor" stroke-width="1.6"/><circle cx="15" cy="12" r="7" stroke="currentColor" stroke-width="1.6"/></svg>
-    Mentoria Worklife
+    <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
+    Sessão Estratégica Individual
   </div>
 </header>
 
 <section class="hero">
   <div class="wrap">
     <div class="hero-copy" data-reveal>
-      <p class="eyebrow">Mentoria para donos de negócio</p>
-      <h1>Vida pessoal e profissional nunca se separam, principalmente se você é o dono do negócio.</h1>
-      <p class="lede">Isso aqui <strong>não é um grupo de networking</strong>. É uma mentoria pra acompanhar você, dono de negócio, nas duas frentes da sua vida que, na prática, nunca estiveram separadas: a pessoal e a profissional.</p>
+      <p class="eyebrow">Sessão estratégica individual</p>
+      <h1>Empreender é tomar decisões o tempo todo.</h1>
+      <p class="lede">Todo dia aparece uma dúvida nova, um problema inesperado ou uma decisão que pode impactar direto o resultado do negócio. Muitas vezes o que falta não é mais informação, é <strong>clareza pra decidir e agir</strong>.</p>
       <div class="hero-actions">
-        <a href="https://wa.me/5553999246827?text=Fala%20Fred%2C%20quero%20participar%20da%20Mentoria%20Worklife!" class="btn" target="_blank" rel="noopener">
-          Quero fazer parte
+        <a href="https://wa.me/5553999246827?text=Fala%20Fred%2C%20quero%20agendar%20minha%20Sess%C3%A3o%20Estrat%C3%A9gica%20Individual!" class="btn" target="_blank" rel="noopener">
+          Quero agendar minha sessão
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
-        <a href="#entregaveis" class="scroll-cue">
-          Veja o que tem dentro
+        <a href="#como-funciona" class="scroll-cue">
+          Veja como funciona
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
         </a>
       </div>
     </div>
     <div class="hero-mark" aria-hidden="true">
-      <svg viewBox="0 0 560 340">
-        <circle cx="230" cy="180" r="95" fill="none" stroke="var(--ink)" stroke-opacity="0.22" stroke-width="1.6"/>
-        <circle cx="330" cy="180" r="95" fill="var(--accent)" fill-opacity="0.08" stroke="var(--accent)" stroke-width="1.6"/>
-
-        <text x="230" y="58" font-family="Poppins" font-size="14" font-weight="700" letter-spacing="0.05em" fill="var(--ink-soft)" text-anchor="middle">PESSOAL</text>
-        <text x="330" y="58" font-family="Poppins" font-size="14" font-weight="700" letter-spacing="0.05em" fill="var(--accent-deep)" text-anchor="middle">PROFISSIONAL</text>
-
-        <g stroke="var(--ink)" stroke-opacity="0.35" stroke-width="1.1" stroke-dasharray="2 3">
-          <line x1="106" y1="112" x2="163.7" y2="112"/>
-          <line x1="78" y1="158" x2="137.6" y2="158"/>
-          <line x1="78" y1="202" x2="137.6" y2="202"/>
-          <line x1="106" y1="248" x2="163.7" y2="248"/>
-        </g>
-        <g font-family="Poppins" font-size="11" font-weight="500" fill="var(--ink-soft)">
-          <circle cx="106" cy="112" r="2.6" fill="var(--ink-soft)"/>
-          <text x="98" y="115" text-anchor="end">hábitos</text>
-          <circle cx="78" cy="158" r="2.6" fill="var(--ink-soft)"/>
-          <text x="70" y="161" text-anchor="end">organização</text>
-          <circle cx="78" cy="202" r="2.6" fill="var(--ink-soft)"/>
-          <text x="70" y="205" text-anchor="end">saúde</text>
-          <circle cx="106" cy="248" r="2.6" fill="var(--ink-soft)"/>
-          <text x="98" y="251" text-anchor="end">família</text>
-        </g>
+      <svg viewBox="0 40 480 380">
+        <circle cx="240" cy="240" r="100" fill="var(--accent)" fill-opacity="0.08" stroke="var(--accent)" stroke-width="1.6"/>
+        <text x="240" y="234" font-family="Poppins" font-size="14" font-weight="700" letter-spacing="0.04em" fill="var(--ink)" text-anchor="middle">SEU</text>
+        <text x="240" y="254" font-family="Poppins" font-size="14" font-weight="700" letter-spacing="0.04em" fill="var(--ink)" text-anchor="middle">DESAFIO</text>
 
         <g stroke="var(--accent)" stroke-opacity="0.4" stroke-width="1.1" stroke-dasharray="2 3">
-          <line x1="454" y1="112" x2="396.3" y2="112"/>
-          <line x1="482" y1="158" x2="422.4" y2="158"/>
-          <line x1="482" y1="202" x2="422.4" y2="202"/>
-          <line x1="454" y1="248" x2="396.3" y2="248"/>
+          <line x1="240" y1="140" x2="240" y2="90"/>
+          <line x1="335.1" y1="209" x2="392.6" y2="189"/>
+          <line x1="298.8" y1="320.9" x2="332.6" y2="368.5"/>
+          <line x1="181.2" y1="320.9" x2="147.4" y2="368.5"/>
+          <line x1="144.9" y1="209.1" x2="87.4" y2="189"/>
         </g>
-        <g font-family="Poppins" font-size="11" font-weight="500" fill="var(--accent-deep)">
-          <circle cx="454" cy="112" r="2.6" fill="var(--accent)"/>
-          <text x="462" y="115" text-anchor="start">equipe</text>
-          <circle cx="482" cy="158" r="2.6" fill="var(--accent)"/>
-          <text x="490" y="161" text-anchor="start">clientes</text>
-          <circle cx="482" cy="202" r="2.6" fill="var(--accent)"/>
-          <text x="490" y="205" text-anchor="start">vendas</text>
-          <circle cx="454" cy="248" r="2.6" fill="var(--accent)"/>
-          <text x="462" y="251" text-anchor="start">marketing</text>
+        <g font-family="Poppins" font-size="13" font-weight="600" fill="var(--accent-deep)">
+          <circle cx="240" cy="90" r="3" fill="var(--accent)"/>
+          <text x="240" y="76" text-anchor="middle">Marketing</text>
+          <circle cx="392.6" cy="189" r="3" fill="var(--accent)"/>
+          <text x="403" y="193" text-anchor="start">Vendas</text>
+          <circle cx="332.6" cy="368.5" r="3" fill="var(--accent)"/>
+          <text x="344" y="384" text-anchor="start">Produto</text>
+          <circle cx="147.4" cy="368.5" r="3" fill="var(--accent)"/>
+          <text x="136" y="384" text-anchor="end">Gestão</text>
+          <circle cx="87.4" cy="189" r="3" fill="var(--accent)"/>
+          <text x="77" y="193" text-anchor="end">IA e SaaS</text>
         </g>
-
-        <rect x="250" y="167" width="60" height="26" rx="13" fill="#fff"/>
-        <text x="280" y="185" font-family="Poppins" font-size="15" font-weight="700" fill="var(--ink)" text-anchor="middle">você</text>
       </svg>
     </div>
   </div>
 </section>
 
-<section class="porque">
-  <div class="wrap">
-    <div class="porque-diagram" aria-hidden="true">
-      <svg viewBox="0 0 300 220">
-        <circle cx="118" cy="110" r="82" fill="none" stroke="var(--ink)" stroke-opacity="0.18" stroke-width="1.6"/>
-        <circle cx="182" cy="110" r="82" fill="var(--accent)" fill-opacity="0.12" stroke="var(--accent)" stroke-width="1.6"/>
-        <text x="72" y="112" font-family="Poppins" font-size="12" font-weight="600" fill="var(--ink-soft)" text-anchor="middle">casa</text>
-        <text x="228" y="112" font-family="Poppins" font-size="12" font-weight="600" fill="var(--accent-deep)" text-anchor="middle">negócio</text>
-        <text x="150" y="115" font-family="Poppins" font-size="12.5" font-weight="700" fill="var(--ink)" text-anchor="middle">mesma</text>
-        <text x="150" y="131" font-family="Poppins" font-size="12.5" font-weight="700" fill="var(--ink)" text-anchor="middle">cabeça</text>
-      </svg>
-    </div>
-    <div class="porque-copy" data-reveal>
-      <p class="eyebrow">Por que isso importa</p>
-      <h2>A decisão de terça de manhã e o jantar de domingo saem da mesma cabeça cansada</h2>
-      <p class="body-text" style="margin-top:20px;">Quando você é dono do negócio, não existe um botão que separa "modo empresário" de "modo pessoa". A conta que não fechou segue com você no jantar. A briga em casa entra na reunião de segunda. Tratar isso como duas vidas independentes só faz você carregar os dois pesos sozinho, sem espaço pra pensar com clareza em nenhum dos dois.</p>
-      <p class="callout">A mentoria Worklife trabalha essa vida inteira, não só a parte que cabe num crachá.</p>
-    </div>
+<section class="problema">
+  <div class="wrap" data-reveal>
+    <p class="eyebrow">Por que isso importa</p>
+    <h2>Na maioria das vezes, o que falta não é mais informação</h2>
+    <p class="body-text" style="margin-top:20px;">Pode ser uma campanha que não performou, uma queda nas vendas, uma dúvida de precificação, um problema no produto, uma contratação importante, uma decisão de gestão ou até a percepção de que existe uma oportunidade de usar tecnologia e IA pra melhorar o negócio.</p>
+    <p class="body-text">Só que, na maior parte das vezes, o problema não é falta de informação. É clareza pra decidir e agir.</p>
+    <p class="callout">A Sessão Estratégica Individual existe pra isso: te ajudar a destravar um desafio específico, tomar uma decisão com mais segurança e sair com um plano de ação claro.</p>
   </div>
 </section>
 
-<section id="entregaveis">
+<section id="temas">
   <div class="wrap">
-    <div class="entregaveis-head" data-reveal>
-      <div>
-        <p class="eyebrow">O que tem dentro</p>
-        <h2>Os quatro pilares da mentoria</h2>
-      </div>
-      <span class="meta-pill">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 9c-1.7 0-3 1.3-3 3s1.3 3 3 3c2.5 0 3.5-6 6-6s3.5 6 6 6c1.7 0 3-1.3 3-3s-1.3-3-3-3c-2.5 0-3.5 6-6 6s-3.5-6-6-6Z"/></svg>
-        Mentoria contínua: enquanto você estiver dentro, permanece
-      </span>
+    <div data-reveal>
+      <p class="eyebrow">Temas</p>
+      <h2>Assuntos que podemos trabalhar na sua sessão</h2>
     </div>
-    <div class="cards" data-reveal>
-      <div class="card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
-        </div>
-        <h3>Encontros quinzenais de conteúdo + hotseat</h3>
-        <p>Sessões ao vivo pra trazer conteúdo novo e abrir espaço pra trazer o problema real que tá travando você naquela semana.</p>
+    <div class="temas-row" data-reveal style="margin-top:32px;">
+      <div class="tema-item">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10v4a1 1 0 0 0 1 1h2l7 4V5l-7 4H4a1 1 0 0 0-1 1Z"/><path d="M17 8.5a4.5 4.5 0 0 1 0 7"/></svg></span>
+        Marketing
       </div>
-      <div class="card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.55L3 20l1.05-5.4A8.5 8.5 0 1 1 21 11.5Z"/></svg>
-        </div>
-        <h3>Suporte + grupo de membros no WhatsApp</h3>
-        <p>Um espaço pra tirar dúvida no dia a dia e trocar com quem também tá tocando negócio sem terceirizar a própria vida.</p>
+      <div class="tema-item">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 6h6v6"/></svg></span>
+        Vendas
       </div>
-      <div class="card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.2"/><rect x="14" y="3" width="7" height="7" rx="1.2"/><rect x="3" y="14" width="7" height="7" rx="1.2"/><rect x="14" y="14" width="7" height="7" rx="1.2"/></svg>
-        </div>
-        <h3>Área de membros com conteúdos, materiais e ferramentas</h3>
-        <p>Tudo organizado num só lugar, pra você voltar sempre que precisar sem depender só do que lembra do encontro.</p>
+      <div class="tema-item">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7.5 12 3l9 4.5-9 4.5-9-4.5Z"/><path d="M3 7.5V16l9 4.5 9-4.5V7.5"/><path d="M12 12v8.5"/></svg></span>
+        Produto
       </div>
-      <div class="card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-4 3.1-6.5 7-6.5s7 2.5 7 6.5"/></svg>
-        </div>
-        <h3>Convidados especialistas</h3>
-        <p>De tempos em tempos, gente de fora traz um olhar diferente pra questões específicas, sem enrolação e direto ao ponto.</p>
+      <div class="tema-item">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="17" rx="1.5"/><path d="M8 3.5v2M16 3.5v2M7.5 11h9M7.5 15h9"/></svg></span>
+        Gestão
+      </div>
+      <div class="tema-item">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="6" width="12" height="12" rx="1.5"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></svg></span>
+        IA e criação de soluções
       </div>
     </div>
-    <div class="bonus" data-reveal>
-      <div class="bonus-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="8" width="18" height="13" rx="1.5"/><path d="M3 8h18M12 8v13M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>
+    <div class="ia-panel" data-reveal>
+      <div class="ia-panel-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg>
       </div>
       <div>
-        <span class="bonus-tag">Bônus surpresa · primeiros participantes</span>
-        <h3>Tem um extra pra quem entrar primeiro</h3>
-        <p>Quem confirmar a vaga entre os primeiros participantes recebe um bônus surpresa, revelado só depois da inscrição confirmada. Não vou contar aqui do que se trata de propósito, mas ele não faz parte da oferta padrão e não vai se repetir nas próximas turmas.</p>
+        <span class="ia-panel-tag">IA e SaaS</span>
+        <h3>Não precisa chegar com uma ideia pronta</h3>
+        <p>No tema de IA e SaaS, a ideia é analisar o teu negócio e pensar em soluções que possam ser criadas pra melhorar a operação, automatizar processos, atender melhor os clientes, aumentar produtividade ou até gerar uma nova fonte de receita.</p>
+        <p>Durante a sessão, podemos partir do próprio negócio, dos problemas que você já enfrenta e das oportunidades que existem, pra entender o que faria sentido construir usando IA.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="assuntos">
+<section class="como-funciona" id="como-funciona">
   <div class="wrap">
-    <div class="assuntos-head" data-reveal>
-      <p class="eyebrow">Assuntos abordados</p>
-      <h2>20 assuntos que vamos tratar nos encontros</h2>
-      <p class="lede">Uma prévia dos temas que entram em pauta ao longo da mentoria, 10 de cada lado da sua vida.</p>
+    <div class="como-funciona-head" data-reveal>
+      <p class="eyebrow">Como funciona</p>
+      <h2>Do agendamento ao plano de ação</h2>
     </div>
-    <div class="assuntos-grid" data-reveal>
-      <div class="assuntos-col is-pessoal">
-        <span class="assuntos-label"><span class="dot"></span>Vida pessoal</span>
-        <ol class="topic-list">
-          <li><span class="n">01</span>Rotina e gestão do tempo</li>
-          <li><span class="n">02</span>Saúde física e mental</li>
-          <li><span class="n">03</span>Relacionamentos e família</li>
-          <li><span class="n">04</span>Hábitos e disciplina</li>
-          <li><span class="n">05</span>Descanso e lazer</li>
-          <li><span class="n">06</span>Finanças pessoais</li>
-          <li><span class="n">07</span>Propósito e realização pessoal</li>
-          <li><span class="n">08</span>Espiritualidade e valores</li>
-          <li><span class="n">09</span>Autoconhecimento e inteligência emocional</li>
-          <li><span class="n">10</span>Equilíbrio entre vida pessoal e trabalho</li>
-        </ol>
+    <div class="steps-list" data-reveal>
+      <div class="step">
+        <span class="step-num">01</span>
+        <div>
+          <h3>Tu contrata a sessão</h3>
+          <p>Escolhe um horário disponível e realiza o pagamento.</p>
+        </div>
       </div>
-      <div class="assuntos-col is-profissional">
-        <span class="assuntos-label"><span class="dot"></span>Vida profissional</span>
-        <ol class="topic-list">
-          <li><span class="n">01</span>Posicionamento e marca pessoal</li>
-          <li><span class="n">02</span>Vendas e negociação</li>
-          <li><span class="n">03</span>Gestão de equipe</li>
-          <li><span class="n">04</span>Marketing e aquisição de clientes</li>
-          <li><span class="n">05</span>Finanças do negócio</li>
-          <li><span class="n">06</span>Processos e produtividade</li>
-          <li><span class="n">07</span>Precificação e oferta</li>
-          <li><span class="n">08</span>Planejamento estratégico</li>
-          <li><span class="n">09</span>Liderança e tomada de decisão</li>
-          <li><span class="n">10</span>Crescimento e escala do negócio</li>
-        </ol>
+      <div class="step">
+        <span class="step-num">02</span>
+        <div>
+          <h3>Responde um formulário de diagnóstico</h3>
+          <p>Antes da sessão, você me conta sobre o negócio, o cenário atual e qual é o principal desafio que quer trabalhar. Isso permite que a nossa conversa já comece com mais contexto e objetividade.</p>
+        </div>
       </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <div>
+          <h3>Fazemos uma sessão individual de 90 minutos</h3>
+          <p>Vamos aprofundar o problema, analisar o cenário, organizar as possibilidades e definir o melhor caminho.</p>
+          <p>A ideia não é ficar apenas na teoria. Vamos trabalhar pra transformar o desafio em decisões práticas.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">04</span>
+        <div>
+          <h3>Você sai com um plano de ação</h3>
+          <p>Ao final da sessão, você terá mais clareza sobre o que fazer, quais decisões tomar e quais devem ser os próximos passos.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">05</span>
+        <div>
+          <h3>Você conta com 30 dias de suporte pelo WhatsApp</h3>
+          <p>Depois da sessão, você ainda terá 30 dias de suporte pelo WhatsApp pra tirar dúvidas relacionadas ao plano de ação, compartilhar avanços e pedir direcionamento pontual durante a execução.</p>
+          <p>Porque muitas vezes uma nova dúvida aparece justamente quando você começa a colocar o plano em prática.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="objetivo">
+  <div class="wrap">
+    <div class="objetivo-intro" data-reveal>
+      <p class="eyebrow">O objetivo</p>
+      <h2>Não é uma consultoria completa em 90 minutos</h2>
+      <p class="body-text" style="margin-top:20px;">É escolher um desafio importante, mergulhar nele e transformar dúvidas, problemas ou possibilidades em decisões e ações concretas.</p>
+    </div>
+    <p class="objetivo-sub" data-reveal>Você pode trazer perguntas como:</p>
+    <div class="quotes-grid" data-reveal>
+      <div class="quote-card"><span class="mark">"</span><p>Minha empresa está vendendo pouco. Onde está o problema?</p></div>
+      <div class="quote-card"><span class="mark">"</span><p>Como posso melhorar meu processo comercial?</p></div>
+      <div class="quote-card"><span class="mark">"</span><p>Estou pensando em mudar meu modelo de negócio. Faz sentido?</p></div>
+      <div class="quote-card"><span class="mark">"</span><p>Como devo precificar meu produto?</p></div>
+      <div class="quote-card"><span class="mark">"</span><p>Tenho várias ideias de aquisição, mas não sei onde focar.</p></div>
+      <div class="quote-card"><span class="mark">"</span><p>Existe alguma solução com IA que eu poderia criar pro meu negócio?</p></div>
+      <div class="quote-card"><span class="mark">"</span><p>Que tipo de ferramenta ou SaaS faria sentido desenvolver pra minha operação?</p></div>
+      <div class="quote-card"><span class="mark">"</span><p>Tenho um processo muito manual. Será que dá pra transformar isso numa solução com IA?</p></div>
+      <div class="quote-card"><span class="mark">"</span><p>Preciso organizar melhor a operação e a gestão da empresa.</p></div>
     </div>
   </div>
 </section>
@@ -700,19 +694,18 @@
   <div class="wrap">
     <div data-reveal>
       <p class="eyebrow">Para quem é</p>
-      <h2>Para o dono de negócio que carrega os dois lados sozinho</h2>
-      <p class="body-text" style="margin-top:16px;">Isso é pra você se:</p>
+      <h2>Para quem sabe que sempre existe uma próxima decisão</h2>
+      <p class="body-text" style="margin-top:16px;">Para empreendedores, gestores e profissionais que sabem que, no dia a dia de um negócio, sempre existe uma próxima decisão a ser tomada.</p>
       <ul class="persona-list">
-        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Você toma decisão da casa e do negócio com a mesma cabeça, no mesmo dia.</li>
-        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Fatura, mas não tem com quem comparar de verdade se tá indo bem.</li>
-        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Mesmo com sócio, gestor ou equipe, a decisão final e o peso dela caem sempre em cima de você.</li>
-        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Sente que, se parar um dia, o negócio para junto com você.</li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Não precisa (ou não quer) contratar uma consultoria de vários meses.</li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Quer acesso a uma visão estratégica quando surge um desafio importante.</li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Prefere trazer o problema logo, em vez de carregar a dúvida por semanas.</li>
       </ul>
     </div>
     <div data-reveal>
       <div style="height:100%; display:flex; align-items:center;">
-        <div class="not-for">
-          <strong>Isso não é pra quem busca só trocar contato ou fechar parceria.</strong> É pra quem quer ser acompanhado de verdade, na vida e no negócio, porque aqui as duas coisas são a mesma coisa.
+        <div class="highlight-box">
+          Você traz o desafio. Nós pensamos juntos. Você sai com uma decisão e um plano.
         </div>
       </div>
     </div>
@@ -721,11 +714,28 @@
 
 <section class="cta-final" id="final">
   <div class="wrap" data-reveal>
+    <div class="detalhes-grid">
+      <div class="detalhe">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
+        <span class="label">Duração</span>
+        <span class="value">90 minutos</span>
+      </div>
+      <div class="detalhe">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-4 3.1-6.5 7-6.5s7 2.5 7 6.5"/></svg></span>
+        <span class="label">Formato</span>
+        <span class="value">Individual, online ou presencial</span>
+      </div>
+      <div class="detalhe">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.55L3 20l1.05-5.4A8.5 8.5 0 1 1 21 11.5Z"/></svg></span>
+        <span class="label">Suporte</span>
+        <span class="value">30 dias pelo WhatsApp</span>
+      </div>
+    </div>
     <p class="eyebrow" style="justify-content:center;">Próximo passo</p>
-    <h2>Bora juntar as duas pontas da sua vida?</h2>
-    <p class="lede">Vagas limitadas pra manter o acompanhamento próximo de verdade.</p>
-    <a href="https://wa.me/5553999246827?text=Fala%20Fred%2C%20quero%20participar%20da%20Mentoria%20Worklife!" class="btn" target="_blank" rel="noopener">
-      Quero fazer parte
+    <h2>Bora destravar essa decisão?</h2>
+    <p class="lede">Marca sua Sessão Estratégica Individual e saia com clareza pra decidir e agir.</p>
+    <a href="https://wa.me/5553999246827?text=Fala%20Fred%2C%20quero%20agendar%20minha%20Sess%C3%A3o%20Estrat%C3%A9gica%20Individual!" class="btn" target="_blank" rel="noopener">
+      Quero agendar minha sessão
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -734,10 +744,10 @@
 <footer>
   <div class="wrap">
     <div class="brand-mark">
-      <svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="12" r="7" stroke="currentColor" stroke-width="1.6"/><circle cx="15" cy="12" r="7" stroke="currentColor" stroke-width="1.6"/></svg>
-      Mentoria Worklife
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
+      Sessão Estratégica Individual
     </div>
-    <p class="fine">Mentoria contínua para donos de negócio.</p>
+    <p class="fine">Com Fred Candiota, pra empreendedores e gestores.</p>
   </div>
 </footer>
 
