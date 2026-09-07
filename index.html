@@ -11,16 +11,16 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
 <style>
   :root{
-    --bg:#ffffff;
-    --ink:#1a1512;
-    --ink-soft:#6b6058;
+    --bg:#0e0e0e;
+    --ink:#f2f2f0;
+    --ink-soft:#a8a5a0;
     --accent:#c15f3c;
-    --accent-deep:#93472c;
-    --accent-tint:#f4e6de;
-    --surface:#f8f5f1;
-    --line:#e7e0d8;
+    --accent-deep:#e2895f;
+    --accent-tint:rgba(193, 95, 60, 0.16);
+    --surface:#161616;
+    --line:#2a2a2a;
     --font: "Poppins", "Segoe UI", Arial, sans-serif;
-    color-scheme: light;
+    color-scheme: dark;
   }
 
   *{box-sizing:border-box;}
@@ -265,10 +265,16 @@
     line-height:1;
     color:var(--accent);
   }
+  .section-accent h3{color:#fff;}
+  .section-accent .tema-block{border-bottom-color:rgba(255,255,255,0.25);}
+  .section-accent .tema-block .icon{background:rgba(255,255,255,0.18);color:#fff;}
+  .section-accent .tema-block .tema-desc{color:rgba(255,255,255,0.85);}
+  .section-accent .tema-questions li{color:#fff;}
+  .section-accent .tema-questions li::before{color:#fff;}
 
   /* ---------- SECTION: COMO FUNCIONA ---------- */
   .como-funciona{
-    background:var(--surface);
+    background:var(--bg);
     border-top:1px solid var(--line);
     border-bottom:1px solid var(--line);
   }
@@ -309,14 +315,17 @@
   }
   .step p + p{margin-top:10px;}
 
-  /* ---------- SECTION: PARA QUEM ---------- */
-  .para-quem{
+  /* ---------- SOLID ACCENT SECTIONS ---------- */
+  .section-accent{
     background:var(--accent);
   }
-  .para-quem .eyebrow{color:#fff;}
-  .para-quem .eyebrow::before{background:#fff;}
-  .para-quem h2{color:#fff;}
-  .para-quem .body-text{color:rgba(255,255,255,0.85);}
+  .section-accent .eyebrow{color:#fff;}
+  .section-accent .eyebrow::before{background:#fff;}
+  .section-accent h2{color:#fff;}
+  .section-accent .body-text,
+  .section-accent .lede{color:rgba(255,255,255,0.85);}
+
+  /* ---------- SECTION: PARA QUEM ---------- */
   .para-quem .wrap{
     display:grid;
     grid-template-columns:0.9fr 1.1fr;
@@ -356,7 +365,7 @@
     font-size:clamp(1.1rem, 1.8vw, 1.4rem);
     line-height:1.45;
     font-weight:600;
-    color:var(--ink);
+    color:#1a1512;
   }
 
   /* ---------- SECTION: DETALHES + CTA FINAL ---------- */
@@ -395,6 +404,12 @@
     font-weight:600;
     color:var(--ink);
   }
+  .section-accent .detalhe{border-color:rgba(255,255,255,0.35);}
+  .section-accent .detalhe .icon{background:rgba(255,255,255,0.18);color:#fff;}
+  .section-accent .detalhe .label{color:rgba(255,255,255,0.75);}
+  .section-accent .detalhe .value{color:#fff;}
+  .section-accent .btn{background:#fff;color:var(--accent-deep);border-color:#fff;}
+  .section-accent .btn:hover{background:#1a1512;color:#fff;border-color:#1a1512;}
 
   .cta-final{
     text-align:center;
@@ -531,7 +546,7 @@
   </div>
 </section>
 
-<section class="para-quem">
+<section class="para-quem section-accent">
   <div class="wrap">
     <div data-reveal>
       <p class="eyebrow">Para quem é</p>
@@ -563,7 +578,7 @@
   </div>
 </section>
 
-<section id="temas">
+<section id="temas" class="section-accent">
   <div class="wrap">
     <div class="temas-head" data-reveal>
       <p class="eyebrow">Temas e objetivo</p>
@@ -675,7 +690,7 @@
   </div>
 </section>
 
-<section class="cta-final" id="final">
+<section class="cta-final section-accent" id="final">
   <div class="wrap" data-reveal>
     <div class="detalhes-grid">
       <div class="detalhe">
