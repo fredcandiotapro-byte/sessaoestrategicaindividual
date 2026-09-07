@@ -203,72 +203,68 @@
     color:var(--ink);
   }
 
-  /* ---------- SECTION: TEMAS ---------- */
-  .temas-row{
+  /* ---------- SECTION: TEMAS + OBJETIVO ---------- */
+  .temas-head{max-width:760px;}
+  .temas-head .lede{margin-top:16px;}
+  .tema-blocks{
+    margin-top:40px;
     display:flex;
-    flex-wrap:wrap;
-    gap:14px;
-    margin-bottom:24px;
+    flex-direction:column;
   }
-  .tema-item{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    padding:14px 20px 14px 14px;
-    border:1px solid var(--line);
-    border-radius:14px;
-    background:#fff;
-    font-weight:600;
-    font-size:0.98rem;
-  }
-  .tema-item .icon{
-    width:34px;height:34px;
-    border-radius:10px;
-    background:var(--accent-tint);
-    color:var(--accent-deep);
-    display:flex;align-items:center;justify-content:center;
-    flex:none;
-  }
-  .tema-item .icon svg{width:17px;height:17px;}
-
-  .ia-panel{
-    margin-top:8px;
-    display:flex;
+  .tema-block{
+    display:grid;
+    grid-template-columns:56px 1fr;
     gap:22px;
-    align-items:flex-start;
-    background:var(--accent-tint);
-    border:1.5px dashed var(--accent);
-    border-radius:18px;
-    padding:28px 30px;
+    padding:30px 0;
+    border-bottom:1px solid var(--line);
   }
-  .ia-panel-icon{
-    flex:none;
-    width:48px;height:48px;
+  .tema-block:first-child{padding-top:0;}
+  .tema-block:last-child{border-bottom:none;padding-bottom:0;}
+  .tema-block .icon{
+    width:44px;height:44px;
     border-radius:12px;
-    background:var(--accent);
-    color:#fff;
+    background:var(--accent-tint);
+    color:var(--accent-deep);
     display:flex;align-items:center;justify-content:center;
   }
-  .ia-panel-icon svg{width:24px;height:24px;}
-  .ia-panel-tag{
-    display:inline-block;
-    font-size:12px;
-    font-weight:700;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--accent-deep);
-    margin-bottom:8px;
-  }
-  .ia-panel h3{
-    font-size:1.1rem;
+  .tema-block .icon svg{width:22px;height:22px;}
+  .tema-block h3{
+    font-size:1.12rem;
     font-weight:600;
-    margin-bottom:8px;
   }
-  .ia-panel p{
-    font-size:0.96rem;
+  .tema-block .tema-desc{
+    font-size:0.95rem;
     color:var(--ink-soft);
+    margin-top:10px;
   }
-  .ia-panel p + p{margin-top:10px;}
+  .tema-block .tema-desc + .tema-desc{margin-top:8px;}
+  .tema-questions{
+    list-style:none;
+    margin:16px 0 0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:11px;
+  }
+  .tema-questions li{
+    position:relative;
+    padding-left:22px;
+    font-size:0.95rem;
+    font-style:italic;
+    color:var(--ink);
+    line-height:1.5;
+  }
+  .tema-questions li::before{
+    content:"\201C";
+    position:absolute;
+    left:0;
+    top:-3px;
+    font-size:1.3rem;
+    font-weight:800;
+    font-style:normal;
+    line-height:1;
+    color:var(--accent);
+  }
 
   /* ---------- SECTION: COMO FUNCIONA ---------- */
   .como-funciona{
@@ -312,42 +308,6 @@
     color:var(--ink-soft);
   }
   .step p + p{margin-top:10px;}
-
-  /* ---------- SECTION: OBJETIVO ---------- */
-  .objetivo .wrap{max-width:1000px;}
-  .objetivo-intro{max-width:720px;}
-  .objetivo-intro p + p{margin-top:14px;}
-  .objetivo-sub{
-    margin-top:38px;
-    margin-bottom:22px;
-    font-weight:600;
-    font-size:1.05rem;
-  }
-  .quotes-grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:16px;
-  }
-  .quote-card{
-    padding:22px 22px 20px;
-    border:1px solid var(--line);
-    border-radius:14px;
-    background:#fff;
-  }
-  .quote-card .mark{
-    font-size:1.8rem;
-    font-weight:800;
-    color:var(--accent);
-    line-height:1;
-    display:block;
-    margin-bottom:6px;
-  }
-  .quote-card p{
-    font-size:0.92rem;
-    font-style:italic;
-    color:var(--ink);
-    line-height:1.5;
-  }
 
   /* ---------- SECTION: PARA QUEM ---------- */
   .para-quem{
@@ -505,7 +465,9 @@
     .como-funciona-head{margin-bottom:28px;}
     .step{grid-template-columns:48px 1fr;gap:16px;padding:22px 0;}
     .step-num{font-size:1.6rem;}
-    .quotes-grid{grid-template-columns:1fr;}
+    .tema-block{grid-template-columns:40px 1fr;gap:14px;padding:22px 0;}
+    .tema-block .icon{width:36px;height:36px;}
+    .tema-block .icon svg{width:18px;height:18px;}
     .para-quem .wrap{grid-template-columns:1fr;gap:32px;}
     .detalhes-grid{grid-template-columns:1fr;gap:12px;}
     .highlight-box{padding:24px 22px;}
@@ -580,41 +542,63 @@
 
 <section id="temas">
   <div class="wrap">
-    <div data-reveal>
-      <p class="eyebrow">Temas</p>
+    <div class="temas-head" data-reveal>
+      <p class="eyebrow">Temas e objetivo</p>
       <h2>Assuntos que podemos trabalhar na sua sessão</h2>
+      <p class="lede">Não é uma consultoria completa sobre toda a empresa em 90 minutos. É escolher um desafio importante, mergulhar nele e transformar dúvidas, problemas ou possibilidades em decisões e ações concretas. Um exemplo do que você pode trazer em cada tema:</p>
     </div>
-    <div class="temas-row" data-reveal style="margin-top:32px;">
-      <div class="tema-item">
+    <div class="tema-blocks" data-reveal>
+      <div class="tema-block">
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10v4a1 1 0 0 0 1 1h2l7 4V5l-7 4H4a1 1 0 0 0-1 1Z"/><path d="M17 8.5a4.5 4.5 0 0 1 0 7"/></svg></span>
-        Marketing
+        <div>
+          <h3>Marketing</h3>
+          <ul class="tema-questions">
+            <li>Tenho várias ideias de aquisição, mas não sei onde focar.</li>
+            <li>Não sei se meu posicionamento está certo pro público que eu quero atrair.</li>
+          </ul>
+        </div>
       </div>
-      <div class="tema-item">
+      <div class="tema-block">
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 6h6v6"/></svg></span>
-        Vendas
+        <div>
+          <h3>Vendas</h3>
+          <ul class="tema-questions">
+            <li>Minha empresa está vendendo pouco. Onde está o problema?</li>
+            <li>Como posso melhorar meu processo comercial?</li>
+          </ul>
+        </div>
       </div>
-      <div class="tema-item">
+      <div class="tema-block">
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7.5 12 3l9 4.5-9 4.5-9-4.5Z"/><path d="M3 7.5V16l9 4.5 9-4.5V7.5"/><path d="M12 12v8.5"/></svg></span>
-        Produto
+        <div>
+          <h3>Produto</h3>
+          <ul class="tema-questions">
+            <li>Como devo precificar meu produto?</li>
+            <li>Tenho uma ideia de produto novo, mas não sei se vale a pena tirar do papel.</li>
+          </ul>
+        </div>
       </div>
-      <div class="tema-item">
+      <div class="tema-block">
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="17" rx="1.5"/><path d="M8 3.5v2M16 3.5v2M7.5 11h9M7.5 15h9"/></svg></span>
-        Gestão
+        <div>
+          <h3>Gestão</h3>
+          <ul class="tema-questions">
+            <li>Estou pensando em mudar meu modelo de negócio. Faz sentido?</li>
+            <li>Preciso organizar melhor a operação e a gestão da empresa.</li>
+          </ul>
+        </div>
       </div>
-      <div class="tema-item">
+      <div class="tema-block">
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="6" width="12" height="12" rx="1.5"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></svg></span>
-        IA e criação de soluções
-      </div>
-    </div>
-    <div class="ia-panel" data-reveal>
-      <div class="ia-panel-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg>
-      </div>
-      <div>
-        <span class="ia-panel-tag">IA e SaaS</span>
-        <h3>Não precisa chegar com uma ideia pronta</h3>
-        <p>No tema de IA e SaaS, a ideia é analisar o teu negócio e pensar em soluções que possam ser criadas pra melhorar a operação, automatizar processos, atender melhor os clientes, aumentar produtividade ou até gerar uma nova fonte de receita.</p>
-        <p>Durante a sessão, podemos partir do próprio negócio, dos problemas que você já enfrenta e das oportunidades que existem, pra entender o que faria sentido construir usando IA.</p>
+        <div>
+          <h3>IA e criação de soluções</h3>
+          <p class="tema-desc">No tema de IA e SaaS, a ideia é analisar o teu negócio e pensar em soluções que possam ser criadas pra melhorar a operação, automatizar processos, atender melhor os clientes, aumentar produtividade ou até gerar uma nova fonte de receita. Você não precisa chegar com uma ideia pronta: podemos partir do próprio negócio e dos problemas que você já enfrenta.</p>
+          <ul class="tema-questions">
+            <li>Existe alguma solução com IA que eu poderia criar pro meu negócio?</li>
+            <li>Que tipo de ferramenta ou SaaS faria sentido desenvolver pra minha operação?</li>
+            <li>Tenho um processo muito manual. Será que dá pra transformar isso numa solução com IA?</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -664,28 +648,6 @@
           <p>Porque muitas vezes uma nova dúvida aparece justamente quando você começa a colocar o plano em prática.</p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="objetivo">
-  <div class="wrap">
-    <div class="objetivo-intro" data-reveal>
-      <p class="eyebrow">O objetivo</p>
-      <h2>Não é uma consultoria completa em 90 minutos</h2>
-      <p class="body-text" style="margin-top:20px;">É escolher um desafio importante, mergulhar nele e transformar dúvidas, problemas ou possibilidades em decisões e ações concretas.</p>
-    </div>
-    <p class="objetivo-sub" data-reveal>Você pode trazer perguntas como:</p>
-    <div class="quotes-grid" data-reveal>
-      <div class="quote-card"><span class="mark">"</span><p>Minha empresa está vendendo pouco. Onde está o problema?</p></div>
-      <div class="quote-card"><span class="mark">"</span><p>Como posso melhorar meu processo comercial?</p></div>
-      <div class="quote-card"><span class="mark">"</span><p>Estou pensando em mudar meu modelo de negócio. Faz sentido?</p></div>
-      <div class="quote-card"><span class="mark">"</span><p>Como devo precificar meu produto?</p></div>
-      <div class="quote-card"><span class="mark">"</span><p>Tenho várias ideias de aquisição, mas não sei onde focar.</p></div>
-      <div class="quote-card"><span class="mark">"</span><p>Existe alguma solução com IA que eu poderia criar pro meu negócio?</p></div>
-      <div class="quote-card"><span class="mark">"</span><p>Que tipo de ferramenta ou SaaS faria sentido desenvolver pra minha operação?</p></div>
-      <div class="quote-card"><span class="mark">"</span><p>Tenho um processo muito manual. Será que dá pra transformar isso numa solução com IA?</p></div>
-      <div class="quote-card"><span class="mark">"</span><p>Preciso organizar melhor a operação e a gestão da empresa.</p></div>
     </div>
   </div>
 </section>
