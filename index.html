@@ -311,10 +311,12 @@
 
   /* ---------- SECTION: PARA QUEM ---------- */
   .para-quem{
-    background:var(--surface);
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
+    background:var(--accent);
   }
+  .para-quem .eyebrow{color:#fff;}
+  .para-quem .eyebrow::before{background:#fff;}
+  .para-quem h2{color:#fff;}
+  .para-quem .body-text{color:rgba(255,255,255,0.85);}
   .para-quem .wrap{
     display:grid;
     grid-template-columns:0.9fr 1.1fr;
@@ -333,14 +335,14 @@
     gap:14px;
     align-items:flex-start;
     font-size:1rem;
-    color:var(--ink);
+    color:#fff;
   }
   .persona-list .tick{
     flex:none;
     width:24px;height:24px;
     border-radius:50%;
-    background:var(--accent);
-    color:#fff;
+    background:#fff;
+    color:var(--accent-deep);
     display:flex;align-items:center;justify-content:center;
     margin-top:2px;
   }
@@ -348,8 +350,8 @@
   .highlight-box{
     margin-top:36px;
     padding:32px 30px;
-    background:var(--accent-tint);
-    border-left:4px solid var(--accent);
+    background:#fff;
+    border-left:4px solid var(--accent-deep);
     border-radius:4px 16px 16px 4px;
     font-size:clamp(1.1rem, 1.8vw, 1.4rem);
     line-height:1.45;
@@ -529,6 +531,28 @@
   </div>
 </section>
 
+<section class="para-quem">
+  <div class="wrap">
+    <div data-reveal>
+      <p class="eyebrow">Para quem é</p>
+      <h2>Para quem sabe que sempre existe uma próxima decisão</h2>
+      <p class="body-text" style="margin-top:16px;">Para empreendedores, gestores e profissionais que sabem que, no dia a dia de um negócio, sempre existe uma próxima decisão a ser tomada.</p>
+      <ul class="persona-list">
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Não precisa (ou não quer) contratar uma consultoria de vários meses.</li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Quer acesso a uma visão estratégica quando surge um desafio importante.</li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Prefere trazer o problema logo, em vez de carregar a dúvida por semanas.</li>
+      </ul>
+    </div>
+    <div data-reveal>
+      <div style="height:100%; display:flex; align-items:center;">
+        <div class="highlight-box">
+          Você traz o desafio. Nós pensamos juntos. Você sai com uma decisão e um plano.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="problema">
   <div class="wrap" data-reveal>
     <p class="eyebrow">Por que isso importa</p>
@@ -591,7 +615,7 @@
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="6" width="12" height="12" rx="1.5"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></svg></span>
         <div>
           <h3>IA e criação de soluções</h3>
-          <p class="tema-desc">No tema de IA e SaaS, a ideia é analisar o teu negócio e pensar em soluções que possam ser criadas pra melhorar a operação, automatizar processos, atender melhor os clientes, aumentar produtividade ou até gerar uma nova fonte de receita. Você não precisa chegar com uma ideia pronta: podemos partir do próprio negócio e dos problemas que você já enfrenta.</p>
+          <p class="tema-desc">No tema de IA e SaaS, a ideia é analisar o seu negócio e pensar em soluções que possam ser criadas pra melhorar a operação, automatizar processos, atender melhor os clientes, aumentar produtividade ou até gerar uma nova fonte de receita. Você não precisa chegar com uma ideia pronta: podemos partir do próprio negócio e dos problemas que você já enfrenta.</p>
           <ul class="tema-questions">
             <li>Existe alguma solução com IA que eu poderia criar pro meu negócio?</li>
             <li>Que tipo de ferramenta ou SaaS faria sentido desenvolver pra minha operação?</li>
@@ -613,7 +637,7 @@
       <div class="step">
         <span class="step-num">01</span>
         <div>
-          <h3>Tu contrata a sessão</h3>
+          <h3>Você contrata a sessão</h3>
           <p>Escolhe um horário disponível e realiza o pagamento.</p>
         </div>
       </div>
@@ -645,28 +669,6 @@
           <h3>Você conta com 30 dias de suporte pelo WhatsApp</h3>
           <p>Depois da sessão, você ainda terá 30 dias de suporte pelo WhatsApp pra tirar dúvidas relacionadas ao plano de ação, compartilhar avanços e pedir direcionamento pontual durante a execução.</p>
           <p>Porque muitas vezes uma nova dúvida aparece justamente quando você começa a colocar o plano em prática.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="para-quem">
-  <div class="wrap">
-    <div data-reveal>
-      <p class="eyebrow">Para quem é</p>
-      <h2>Para quem sabe que sempre existe uma próxima decisão</h2>
-      <p class="body-text" style="margin-top:16px;">Para empreendedores, gestores e profissionais que sabem que, no dia a dia de um negócio, sempre existe uma próxima decisão a ser tomada.</p>
-      <ul class="persona-list">
-        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Não precisa (ou não quer) contratar uma consultoria de vários meses.</li>
-        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Quer acesso a uma visão estratégica quando surge um desafio importante.</li>
-        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Prefere trazer o problema logo, em vez de carregar a dúvida por semanas.</li>
-      </ul>
-    </div>
-    <div data-reveal>
-      <div style="height:100%; display:flex; align-items:center;">
-        <div class="highlight-box">
-          Você traz o desafio. Nós pensamos juntos. Você sai com uma decisão e um plano.
         </div>
       </div>
     </div>
