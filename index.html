@@ -137,16 +137,29 @@
 
   /* ---------- HERO ---------- */
   .hero{
-    padding-top:clamp(28px, 4vw, 56px);
-    padding-bottom:clamp(56px, 9vw, 100px);
+    min-height:100vh;
+    min-height:100dvh;
+    padding-bottom:clamp(28px, 5vw, 56px);
+    display:flex;
+    flex-direction:column;
     position:relative;
     overflow:hidden;
   }
-  .hero .wrap{
+  .hero-topbar{
+    flex:none;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:32px;
+    margin-bottom:12px;
+  }
+  .hero-body{
+    flex:1;
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:clamp(32px, 6vw, 72px);
-    align-items:start;
+    align-items:center;
+    align-content:center;
   }
   .hero-copy .lede{
     margin-top:22px;
@@ -473,8 +486,9 @@
 
   @media (max-width: 860px){
     section{padding:44px 0;}
-    .hero{padding-top:24px;padding-bottom:36px;}
-    .hero .wrap{grid-template-columns:1fr;}
+    .hero{padding-bottom:28px;}
+    .hero-topbar{padding-top:24px;}
+    .hero-body{grid-template-columns:1fr;}
     .hero-mark{margin-top:8px;}
     .hero-mark svg{max-width:320px;}
     .hero-actions{flex-direction:column;align-items:flex-start;}
@@ -492,15 +506,14 @@
 </head>
 <body>
 
-<header class="wrap" style="padding-top:32px; display:flex; align-items:center; justify-content:space-between;">
-  <div class="brand-mark">
-    <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
-    Sessão Estratégica Individual
-  </div>
-</header>
-
 <section class="hero">
-  <div class="wrap">
+  <div class="hero-topbar wrap">
+    <div class="brand-mark">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
+      Sessão Estratégica Individual
+    </div>
+  </div>
+  <div class="wrap hero-body">
     <div class="hero-copy" data-reveal>
       <h1>Empreender é tomar decisões o tempo todo.</h1>
       <p class="lede">Todo dia aparece uma dúvida nova, um problema inesperado ou uma decisão que pode impactar direto o resultado do negócio. Muitas vezes o que falta não é mais informação, é <strong>clareza pra decidir e agir</strong>.</p>
