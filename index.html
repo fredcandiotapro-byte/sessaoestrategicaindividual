@@ -74,9 +74,9 @@
   }
 
   h1{
-    font-size:clamp(1.9rem, 3.6vw, 2.85rem);
+    font-size:clamp(1.6rem, 2.8vw, 2.35rem);
     font-weight:700;
-    line-height:1.28;
+    line-height:1.26;
     letter-spacing:-0.01em;
   }
 
@@ -159,8 +159,9 @@
     align-items:center;
   }
   .hero-copy .lede{
-    margin-top:22px;
-    max-width:520px;
+    margin-top:18px;
+    max-width:500px;
+    font-size:clamp(0.95rem, 1.2vw, 1.05rem);
   }
   .hero-copy .lede strong{
     color:var(--ink);
@@ -169,14 +170,15 @@
   .hero-visual{
     position:relative;
     display:flex;
-    justify-content:center;
+    flex-direction:column;
+    align-items:center;
     align-self:center;
     width:100%;
   }
   .hero-photo-frame{
     position:relative;
     width:100%;
-    max-width:380px;
+    max-width:470px;
     aspect-ratio:1/1;
   }
   .hero-photo{
@@ -194,21 +196,19 @@
     pointer-events:none;
   }
   .hero-mark{
-    position:absolute;
-    left:50%;
-    bottom:-130px;
-    transform:translateX(-50%);
+    position:relative;
+    margin-top:-160px;
     width:80%;
-    max-width:300px;
+    max-width:370px;
     z-index:2;
   }
   .hero-mark svg{width:100%;height:auto;display:block;}
 
   .hero-actions{
-    margin-top:34px;
+    margin-top:26px;
     display:flex;
     align-items:center;
-    gap:28px;
+    gap:24px;
     flex-wrap:wrap;
   }
 
@@ -396,7 +396,17 @@
   }
 
   /* ---------- SECTION: SOBRE ---------- */
-  .sobre .wrap{max-width:800px;}
+  .sobre-grid{
+    max-width:980px;
+    display:grid;
+    grid-template-columns:260px 1fr;
+    gap:clamp(32px, 5vw, 56px);
+    align-items:start;
+  }
+  .sobre-photo-img{
+    width:100%;
+    display:block;
+  }
   .sobre-highlights{
     list-style:none;
     margin:28px 0 0;
@@ -488,14 +498,17 @@
 
   @media (max-width: 860px){
     section{padding:44px 0;}
-    .hero{padding-top:28px;padding-bottom:150px;}
+    .hero{padding-top:28px;padding-bottom:28px;}
     .hero-body{grid-template-columns:1fr;}
     .hero-mark{margin-top:8px;}
+    .hero-mark{margin-top:-114px;}
     .hero-mark svg{max-width:320px;}
     .hero-actions{flex-direction:column;align-items:flex-start;}
     .formatos-grid{grid-template-columns:1fr;}
     .training-grid{grid-template-columns:1fr;}
     .agenda-item{grid-template-columns:1fr;gap:10px;}
+    .sobre-grid{grid-template-columns:1fr;}
+    .sobre-photo{max-width:220px;margin:0 auto;}
     .agenda-item .btn-sm{justify-self:start;}
   }
 </style>
@@ -710,11 +723,14 @@
 </section>
 
 <section id="sobre" class="sobre">
-  <div class="wrap">
+  <div class="wrap sobre-grid">
+    <div class="sobre-photo" data-reveal>
+      <img src="fred.png" alt="Fred Candiota" class="sobre-photo-img">
+    </div>
     <div data-reveal>
       <p class="eyebrow">Quem treina</p>
-      <h2>Fred Candiota</h2>
-      <p class="body-text" style="margin-top:20px;">Há 10 anos trabalhando com marketing, vendas e produto. Já teve agência, atendendo clientes de diversos segmentos, participou de grandes lançamentos digitais e não digitais, incluindo empreendimentos, e foi co-produtor de uma mentoria que saiu do zero absoluto e chegou a 35 mentorados faturando 100 mil com high ticket em poucos meses.</p>
+      <h2>Sobre o seu treinador</h2>
+      <p class="body-text" style="margin-top:20px;">Fred Candiota trabalha há 10 anos com marketing, vendas e produto. Já teve agência, atendendo clientes de diversos segmentos, participou de grandes lançamentos digitais e não digitais, incluindo empreendimentos, e foi co-produtor de uma mentoria que saiu do zero absoluto e chegou a 35 mentorados faturando 100 mil com high ticket em poucos meses.</p>
       <ul class="sobre-highlights">
         <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Treinador de pessoas e empresas em marketing, vendas, produto e pessoas.</li>
         <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Criador da Imersão MVP e de todos os treinamentos acima.</li>
