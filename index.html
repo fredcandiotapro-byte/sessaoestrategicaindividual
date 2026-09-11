@@ -190,19 +190,13 @@
   }
   .hero-photo-fade{
     position:absolute;
-    inset:0;
-    background:#ffffff;
-    clip-path:polygon(0% 76%, 100% 56%, 100% 100%, 0% 100%);
+    left:0;
+    right:0;
+    bottom:0;
+    height:60%;
+    background:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 55%, #ffffff 92%);
     pointer-events:none;
   }
-  .hero-mark{
-    position:relative;
-    margin-top:-160px;
-    width:80%;
-    max-width:370px;
-    z-index:2;
-  }
-  .hero-mark svg{width:100%;height:auto;display:block;}
 
   .hero-actions{
     margin-top:26px;
@@ -241,7 +235,14 @@
   .section-dark .agenda-item{border-bottom-color:rgba(255,255,255,0.15);}
 
   /* ---------- SECTION: POR QUE TREINAR ---------- */
-  .porque .wrap{max-width:800px;}
+  .porque-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:clamp(32px, 6vw, 64px);
+    align-items:center;
+  }
+  .porque-visual{display:flex;justify-content:center;}
+  .porque-visual svg{width:100%;max-width:400px;height:auto;display:block;}
   .porque p + p{margin-top:16px;}
   .porque .callout{
     margin-top:26px;
@@ -460,9 +461,19 @@
     gap:clamp(32px, 5vw, 56px);
     align-items:start;
   }
+  .sobre-photo{position:relative;overflow:hidden;border-radius:14px;}
   .sobre-photo-img{
     width:100%;
     display:block;
+  }
+  .sobre-photo-fade{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:45%;
+    background:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.65) 60%, #ffffff 95%);
+    pointer-events:none;
   }
   .sobre-highlights{
     list-style:none;
@@ -557,10 +568,10 @@
     section{padding:44px 0;}
     .hero{padding-top:28px;padding-bottom:28px;}
     .hero-body{grid-template-columns:1fr;}
-    .hero-mark{margin-top:8px;}
-    .hero-mark{margin-top:-114px;}
-    .hero-mark svg{max-width:320px;}
     .hero-actions{flex-direction:column;align-items:flex-start;}
+    .porque-grid{grid-template-columns:1fr;}
+    .porque-visual{order:-1;margin-bottom:8px;}
+    .porque-visual svg{max-width:280px;}
     .formatos-grid{grid-template-columns:1fr;}
     .training-grid{grid-template-columns:1fr;}
     .agenda-item{grid-template-columns:1fr;gap:10px;}
@@ -583,30 +594,39 @@
           Ver treinamentos
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
-        <a href="#sobre" class="scroll-cue">
-          Conhecer o Fred
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
-        </a>
       </div>
     </div>
     <div class="hero-visual">
       <div class="hero-photo-frame">
-        <img src="fred.png" alt="Fred Candiota, treinador de marketing, vendas, produto e pessoas" class="hero-photo">
+        <img src="fred-hero.png" alt="Fred Candiota, treinador de marketing, vendas, produto e pessoas" class="hero-photo">
         <div class="hero-photo-fade"></div>
       </div>
-      <div class="hero-mark" aria-hidden="true">
-      <svg viewBox="0 50 480 400">
-        <circle cx="240" cy="240" r="100" fill="var(--accent)" fill-opacity="0.08" stroke="var(--accent)" stroke-width="1.6"/>
-        <text x="240" y="233" font-family="Poppins" font-size="14" font-weight="700" letter-spacing="0.04em" fill="var(--ink)" text-anchor="middle">SEUS</text>
-        <text x="240" y="253" font-family="Poppins" font-size="12" font-weight="700" letter-spacing="0.02em" fill="var(--ink)" text-anchor="middle">RESULTADOS</text>
+    </div>
+  </div>
+</section>
 
-        <g stroke="var(--accent)" stroke-opacity="0.4" stroke-width="1.1" stroke-dasharray="2 3">
+<section class="porque section-dark">
+  <div class="wrap porque-grid">
+    <div data-reveal>
+      <p class="eyebrow">Por que isso importa</p>
+      <h2>Ninguém bate meta todo mês por acaso</h2>
+      <p class="body-text" style="margin-top:20px;">Resultado consistente não vem de sorte, vem de time preparado. Quando só o dono se desenvolve e o time fica parado, a empresa cresce até onde o dono aguenta carregar sozinho. Quando o time inteiro treina junto, na mesma direção, o negócio destrava de verdade.</p>
+      <p class="body-text">Por isso treino tanto donos de empresa quanto colaboradores: marketing, vendas, produto e pessoas são frentes que precisam evoluir juntas, o tempo todo, não só quando aparece um problema.</p>
+      <p class="callout">Treinamento constante não é custo. É o que sustenta performance alta mês após mês.</p>
+    </div>
+    <div class="porque-visual" data-reveal aria-hidden="true">
+      <svg viewBox="0 50 480 400">
+        <circle cx="240" cy="240" r="100" fill="var(--accent)" fill-opacity="0.1" stroke="var(--accent)" stroke-width="1.6"/>
+        <text x="240" y="233" font-family="Poppins" font-size="14" font-weight="700" letter-spacing="0.04em" fill="#fff" text-anchor="middle">SEUS</text>
+        <text x="240" y="253" font-family="Poppins" font-size="12" font-weight="700" letter-spacing="0.02em" fill="#fff" text-anchor="middle">RESULTADOS</text>
+
+        <g stroke="var(--accent)" stroke-opacity="0.5" stroke-width="1.1" stroke-dasharray="2 3">
           <line x1="240" y1="140" x2="240" y2="100"/>
           <line x1="340" y1="240" x2="380" y2="240"/>
           <line x1="240" y1="340" x2="240" y2="380"/>
           <line x1="140" y1="240" x2="100" y2="240"/>
         </g>
-        <g font-family="Poppins" font-size="13" font-weight="600" fill="var(--accent-deep)">
+        <g font-family="Poppins" font-size="13" font-weight="600" fill="var(--accent)">
           <circle cx="240" cy="90" r="3" fill="var(--accent)"/>
           <text x="240" y="76" text-anchor="middle">Marketing</text>
           <circle cx="390" cy="240" r="3" fill="var(--accent)"/>
@@ -617,18 +637,7 @@
           <text x="78" y="244" text-anchor="end">Pessoas</text>
         </g>
       </svg>
-      </div>
     </div>
-  </div>
-</section>
-
-<section class="porque section-dark">
-  <div class="wrap" data-reveal>
-    <p class="eyebrow">Por que isso importa</p>
-    <h2>Ninguém bate meta todo mês por acaso</h2>
-    <p class="body-text" style="margin-top:20px;">Resultado consistente não vem de sorte, vem de time preparado. Quando só o dono se desenvolve e o time fica parado, a empresa cresce até onde o dono aguenta carregar sozinho. Quando o time inteiro treina junto, na mesma direção, o negócio destrava de verdade.</p>
-    <p class="body-text">Por isso treino tanto donos de empresa quanto colaboradores: marketing, vendas, produto e pessoas são frentes que precisam evoluir juntas, o tempo todo, não só quando aparece um problema.</p>
-    <p class="callout">Treinamento constante não é custo. É o que sustenta performance alta mês após mês.</p>
   </div>
 </section>
 
@@ -848,7 +857,8 @@
 <section id="sobre" class="sobre">
   <div class="wrap sobre-grid">
     <div class="sobre-photo" data-reveal>
-      <img src="fred.png" alt="Fred Candiota" class="sobre-photo-img">
+      <img src="fred-sobre.png" alt="Fred Candiota" class="sobre-photo-img">
+      <div class="sobre-photo-fade"></div>
     </div>
     <div data-reveal>
       <p class="eyebrow">Quem treina</p>
