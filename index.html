@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sessão Estratégica Individual</title>
-<meta name="description" content="Sessão Estratégica Individual com Fred Candiota: 90 minutos pra destravar uma decisão importante do seu negócio e sair com um plano de ação claro.">
+<title>Treinamentos com Fred Candiota</title>
+<meta name="description" content="Treinamentos de marketing, vendas, produto e pessoas para donos de empresa e times, em turmas públicas ou dentro da sua empresa.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
 <style>
   :root{
-    --bg:#0e0e0e;
-    --ink:#f2f2f0;
-    --ink-soft:#a8a5a0;
+    --bg:#ffffff;
+    --ink:#1a1512;
+    --ink-soft:#6b6058;
     --accent:#c15f3c;
-    --accent-deep:#e2895f;
-    --accent-tint:rgba(193, 95, 60, 0.16);
-    --surface:#161616;
-    --line:#2a2a2a;
+    --accent-deep:#93472c;
+    --accent-tint:#f4e6de;
+    --surface:#f8f5f1;
+    --line:#e7e0d8;
     --font: "Poppins", "Segoe UI", Arial, sans-serif;
-    color-scheme: dark;
+    color-scheme: light;
   }
 
   *{box-sizing:border-box;}
@@ -37,7 +37,6 @@
   }
 
   img{max-width:100%;display:block;}
-
   a{color:inherit;}
 
   .wrap{
@@ -116,7 +115,7 @@
     text-decoration:none;
     border:1px solid var(--accent);
     transition:transform .18s ease, background .18s ease, box-shadow .18s ease;
-    box-shadow:0 10px 24px -12px rgba(147,71,44,0.55);
+    box-shadow:0 10px 24px -12px rgba(147,71,44,0.35);
     cursor:pointer;
   }
   .btn:hover{
@@ -130,6 +129,13 @@
   }
   .btn svg{width:18px;height:18px;transition:transform .18s ease;}
   .btn:hover svg{transform:translateX(3px);}
+
+  .btn-sm{
+    padding:11px 20px;
+    font-size:0.92rem;
+    box-shadow:none;
+  }
+  .btn-sm svg{width:15px;height:15px;}
 
   section{
     padding:clamp(64px, 10vw, 128px) 0;
@@ -163,12 +169,43 @@
     color:var(--ink);
     font-weight:600;
   }
-  .hero-mark{
+  .hero-visual{
+    position:relative;
     display:flex;
     justify-content:center;
     align-self:center;
+    width:100%;
   }
-  .hero-mark svg{width:100%;max-width:480px;height:auto;}
+  .hero-photo-frame{
+    position:relative;
+    width:100%;
+    max-width:380px;
+    aspect-ratio:1/1;
+  }
+  .hero-photo{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:top center;
+    display:block;
+  }
+  .hero-photo-fade{
+    position:absolute;
+    inset:0;
+    background:#ffffff;
+    clip-path:polygon(0% 76%, 100% 56%, 100% 100%, 0% 100%);
+    pointer-events:none;
+  }
+  .hero-mark{
+    position:absolute;
+    left:50%;
+    bottom:-130px;
+    transform:translateX(-50%);
+    width:80%;
+    max-width:300px;
+    z-index:2;
+  }
+  .hero-mark svg{width:100%;height:auto;display:block;}
 
   .hero-actions{
     margin-top:34px;
@@ -193,15 +230,15 @@
     50%{transform:translateY(4px);}
   }
 
-  /* ---------- SECTION: O PROBLEMA ---------- */
-  .problema{
+  /* ---------- SECTION: POR QUE TREINAR ---------- */
+  .porque{
     background:var(--surface);
     border-top:1px solid var(--line);
     border-bottom:1px solid var(--line);
   }
-  .problema .wrap{max-width:800px;}
-  .problema p + p{margin-top:16px;}
-  .problema .callout{
+  .porque .wrap{max-width:800px;}
+  .porque p + p{margin-top:16px;}
+  .porque .callout{
     margin-top:26px;
     padding-left:18px;
     border-left:3px solid var(--accent);
@@ -210,233 +247,205 @@
     color:var(--ink);
   }
 
-  /* ---------- SECTION: TEMAS + OBJETIVO ---------- */
-  .temas-head{max-width:760px;}
-  .temas-head .lede{margin-top:16px;}
-  .tema-blocks{
-    margin-top:40px;
-    display:flex;
-    flex-direction:column;
-  }
-  .tema-block{
+  /* ---------- SECTION: FORMATOS ---------- */
+  .formatos-head{max-width:700px;margin-bottom:44px;}
+  .formatos-head .lede{margin-top:16px;}
+  .formatos-grid{
     display:grid;
-    grid-template-columns:56px 1fr;
-    gap:22px;
-    padding:30px 0;
-    border-bottom:1px solid var(--line);
+    grid-template-columns:1fr 1fr;
+    gap:24px;
   }
-  .tema-block:first-child{padding-top:0;}
-  .tema-block:last-child{border-bottom:none;padding-bottom:0;}
-  .tema-block .icon{
-    width:44px;height:44px;
-    border-radius:12px;
-    background:var(--accent-tint);
+  .formato-card{
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:30px 28px;
+    background:#fff;
+  }
+  .formato-card .tag{
+    display:inline-block;
+    font-size:11.5px;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
     color:var(--accent-deep);
-    display:flex;align-items:center;justify-content:center;
+    background:var(--accent-tint);
+    padding:5px 12px;
+    border-radius:999px;
+    margin-bottom:14px;
   }
-  .tema-block .icon svg{width:22px;height:22px;}
-  .tema-block h3{
-    font-size:1.12rem;
+  .formato-card h3{
+    font-size:1.15rem;
     font-weight:600;
+    margin-bottom:10px;
   }
-  .tema-block .tema-desc{
-    font-size:0.95rem;
+  .formato-card p{
+    font-size:0.96rem;
     color:var(--ink-soft);
-    margin-top:10px;
   }
-  .tema-block .tema-desc + .tema-desc{margin-top:8px;}
-  .tema-questions{
-    list-style:none;
-    margin:16px 0 0;
-    padding:0;
+
+  /* ---------- SECTION: TREINAMENTOS ---------- */
+  .treinamentos-head{max-width:700px;margin-bottom:44px;}
+  .training-featured{
+    border:1.5px solid var(--accent);
+    border-radius:20px;
+    padding:34px 32px;
+    background:var(--accent-tint);
+    margin-bottom:24px;
+  }
+  .training-tag{
+    display:inline-block;
+    font-size:11.5px;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--accent-deep);
+    margin-bottom:12px;
+  }
+  .training-featured h3{
+    font-size:1.5rem;
+    font-weight:700;
+    margin-bottom:12px;
+  }
+  .training-featured > p.body-text{
+    max-width:640px;
+    margin-bottom:20px;
+  }
+  .training-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:20px;
+  }
+  .training-card{
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:28px 26px;
+    background:#fff;
     display:flex;
     flex-direction:column;
-    gap:11px;
+    transition:border-color .18s ease, transform .18s ease, box-shadow .18s ease;
   }
-  .tema-questions li{
-    position:relative;
-    padding-left:22px;
+  .training-card:hover{
+    border-color:var(--accent);
+    transform:translateY(-3px);
+    box-shadow:0 16px 32px -22px rgba(26,21,18,0.25);
+  }
+  .training-card h3{
+    font-size:1.15rem;
+    font-weight:600;
+    margin-bottom:10px;
+  }
+  .training-card p.body-text{
     font-size:0.95rem;
-    font-style:italic;
-    color:var(--ink);
-    line-height:1.5;
+    margin-bottom:16px;
   }
-  .tema-questions li::before{
-    content:"\201C";
-    position:absolute;
-    left:0;
-    top:-3px;
-    font-size:1.3rem;
-    font-weight:800;
-    font-style:normal;
-    line-height:1;
-    color:var(--accent);
+  .tag-list{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:0 0 22px;
+    padding:0;
   }
-  .section-accent h3{color:#1a1512;}
-  .section-accent .tema-block{border-bottom-color:#e7e0d8;}
-  .section-accent .tema-block .icon{background:#f4e6de;color:#93472c;}
-  .section-accent .tema-block .tema-desc{color:#6b6058;}
-  .section-accent .tema-questions li{color:#1a1512;}
-  .section-accent .tema-questions li::before{color:var(--accent);}
+  .tag-list li{
+    font-size:0.8rem;
+    font-weight:500;
+    padding:5px 12px;
+    border-radius:999px;
+    background:var(--surface);
+    border:1px solid var(--line);
+    color:var(--ink-soft);
+  }
+  .training-card .btn-sm, .training-featured .btn-sm{margin-top:auto;align-self:flex-start;}
 
-  /* ---------- SECTION: COMO FUNCIONA ---------- */
-  .como-funciona{
-    background:var(--bg);
+  /* ---------- SECTION: AGENDA ---------- */
+  .agenda{
+    background:var(--surface);
     border-top:1px solid var(--line);
     border-bottom:1px solid var(--line);
   }
-  .como-funciona-head{
-    max-width:640px;
-    margin-bottom:44px;
-  }
-  .como-funciona-head .lede{margin-top:16px;}
-  .steps-list{
+  .agenda-head{max-width:700px;margin-bottom:44px;}
+  .agenda-list{
     display:flex;
     flex-direction:column;
   }
-  .step{
+  .agenda-item{
     display:grid;
-    grid-template-columns:72px 1fr;
+    grid-template-columns:120px 1fr auto;
     gap:24px;
+    align-items:center;
     padding:28px 0;
     border-bottom:1px solid var(--line);
   }
-  .step:first-child{padding-top:0;}
-  .step:last-child{border-bottom:none;padding-bottom:0;}
-  .step-num{
-    font-size:2.1rem;
-    font-weight:800;
-    color:var(--accent);
-    line-height:1;
-    font-variant-numeric:tabular-nums;
+  .agenda-item:first-child{padding-top:0;}
+  .agenda-item:last-child{border-bottom:none;padding-bottom:0;}
+  .agenda-date{
+    font-size:1rem;
+    font-weight:700;
+    color:var(--accent-deep);
+    line-height:1.3;
   }
-  .step h3{
-    font-size:1.12rem;
+  .agenda-item h3{
+    font-size:1.1rem;
     font-weight:600;
-    margin-bottom:8px;
+    margin-bottom:6px;
   }
-  .step p{
-    font-size:0.98rem;
+  .agenda-details{
+    font-size:0.9rem;
     color:var(--ink-soft);
   }
-  .step p + p{margin-top:10px;}
 
-  /* ---------- SOLID ACCENT SECTIONS ---------- */
-  .section-accent{
-    background:#ffffff;
-  }
-  .section-accent .eyebrow{color:#93472c;}
-  .section-accent .eyebrow::before{background:var(--accent);}
-  .section-accent h2{color:#1a1512;}
-  .section-accent .body-text,
-  .section-accent .lede{color:#6b6058;}
-
-  /* ---------- SECTION: PARA QUEM ---------- */
-  .para-quem .wrap{
-    display:grid;
-    grid-template-columns:0.9fr 1.1fr;
-    gap:clamp(36px, 6vw, 72px);
-  }
-  .persona-list{
+  /* ---------- SECTION: SOBRE ---------- */
+  .sobre .wrap{max-width:800px;}
+  .sobre-highlights{
     list-style:none;
-    margin:32px 0 0;
+    margin:28px 0 0;
     padding:0;
     display:flex;
     flex-direction:column;
-    gap:18px;
+    gap:16px;
   }
-  .persona-list li{
+  .sobre-highlights li{
     display:flex;
     gap:14px;
     align-items:flex-start;
     font-size:1rem;
-    color:#1a1512;
+    color:var(--ink);
   }
-  .persona-list .tick{
+  .sobre-highlights .tick{
     flex:none;
-    width:24px;height:24px;
+    width:22px;height:22px;
     border-radius:50%;
     background:var(--accent);
     color:#fff;
     display:flex;align-items:center;justify-content:center;
     margin-top:2px;
   }
-  .persona-list .tick svg{width:13px;height:13px;}
-  .highlight-box{
-    margin-top:36px;
-    padding:32px 30px;
-    background:var(--accent);
-    border-left:4px solid #93472c;
-    border-radius:4px 16px 16px 4px;
-    font-size:clamp(1.1rem, 1.8vw, 1.4rem);
-    line-height:1.45;
-    font-weight:600;
-    color:#fff;
-  }
-
-  /* ---------- SECTION: DETALHES + CTA FINAL ---------- */
-  .detalhes-grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:16px;
-    margin-bottom:48px;
-  }
-  .detalhe{
-    padding:24px;
-    border:1px solid var(--line);
-    border-radius:14px;
-    text-align:center;
-  }
-  .detalhe .icon{
-    width:40px;height:40px;
-    margin:0 auto 14px;
-    border-radius:10px;
+  .sobre-highlights .tick svg{width:12px;height:12px;}
+  .sobre-personal{
+    margin-top:32px;
+    padding:26px 28px;
     background:var(--accent-tint);
-    color:var(--accent-deep);
-    display:flex;align-items:center;justify-content:center;
-  }
-  .detalhe .icon svg{width:20px;height:20px;}
-  .detalhe .label{
-    display:block;
-    font-size:11.5px;
-    font-weight:700;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-    margin-bottom:6px;
-  }
-  .detalhe .value{
-    font-size:1rem;
-    font-weight:600;
+    border-left:4px solid var(--accent);
+    border-radius:4px 16px 16px 4px;
+    font-size:1.05rem;
+    font-weight:500;
     color:var(--ink);
   }
-  .section-accent .detalhe{border-color:#e7e0d8;}
-  .section-accent .detalhe .icon{background:#f4e6de;color:#93472c;}
-  .section-accent .detalhe .label{color:#6b6058;}
-  .section-accent .detalhe .value{color:#1a1512;}
-  .section-accent .btn{background:var(--accent);color:#fff;border-color:var(--accent);}
-  .section-accent .btn:hover{background:#93472c;color:#fff;border-color:#93472c;}
 
+  /* ---------- SECTION: CTA FINAL ---------- */
   .cta-final{
     text-align:center;
+    background:var(--surface);
+    border-top:1px solid var(--line);
   }
   .cta-final .wrap{
     display:flex;
     flex-direction:column;
     align-items:center;
   }
-  .cta-final h2{
-    max-width:640px;
-  }
-  .cta-final .lede{
-    margin-top:16px;
-    max-width:520px;
-  }
-  .cta-final .btn{
-    margin-top:34px;
-    font-size:1.08rem;
-    padding:18px 38px;
-  }
+  .cta-final h2{max-width:640px;}
+  .cta-final .lede{margin-top:16px;max-width:480px;}
+  .cta-final .btn{margin-top:34px;font-size:1.08rem;padding:18px 38px;}
 
   footer{
     padding:36px 0 48px;
@@ -480,20 +489,15 @@
 
   @media (max-width: 860px){
     section{padding:44px 0;}
-    .hero{padding-top:28px;padding-bottom:28px;}
+    .hero{padding-top:28px;padding-bottom:150px;}
     .hero-body{grid-template-columns:1fr;}
     .hero-mark{margin-top:8px;}
     .hero-mark svg{max-width:320px;}
     .hero-actions{flex-direction:column;align-items:flex-start;}
-    .como-funciona-head{margin-bottom:28px;}
-    .step{grid-template-columns:48px 1fr;gap:16px;padding:22px 0;}
-    .step-num{font-size:1.6rem;}
-    .tema-block{grid-template-columns:40px 1fr;gap:14px;padding:22px 0;}
-    .tema-block .icon{width:36px;height:36px;}
-    .tema-block .icon svg{width:18px;height:18px;}
-    .para-quem .wrap{grid-template-columns:1fr;gap:32px;}
-    .detalhes-grid{grid-template-columns:1fr;gap:12px;}
-    .highlight-box{padding:24px 22px;}
+    .formatos-grid{grid-template-columns:1fr;}
+    .training-grid{grid-template-columns:1fr;}
+    .agenda-item{grid-template-columns:1fr;gap:10px;}
+    .agenda-item .btn-sm{justify-self:start;}
   }
 </style>
 </head>
@@ -502,218 +506,235 @@
 <section class="hero">
   <div class="wrap hero-body">
     <div class="hero-copy" data-reveal>
-      <p class="eyebrow">Sessão Estratégica Individual</p>
-      <h1>Empreender é tomar decisões o tempo todo.</h1>
-      <p class="lede">Todo dia aparece uma dúvida nova, um problema inesperado ou uma decisão que pode impactar direto o resultado do negócio. Muitas vezes o que falta não é mais informação, é <strong>clareza pra decidir e agir</strong>.</p>
+      <p class="eyebrow">Treinamento para pessoas e empresas</p>
+      <h1>Eu treino você e o seu time pra sua empresa atingir o máximo potencial e bater meta todos os meses.</h1>
+      <p class="lede">Marketing, vendas, produto e pessoas: as quatro frentes que decidem se um negócio cresce ou fica parado. Eu treino donos de empresa e times inteiros nessas áreas, em <strong>turmas públicas</strong> ou <strong>dentro da sua empresa</strong>.</p>
       <div class="hero-actions">
-        <a href="https://wa.me/5553999246827?text=Fala%20Fred%2C%20quero%20agendar%20minha%20Sess%C3%A3o%20Estrat%C3%A9gica%20Individual!" class="btn" target="_blank" rel="noopener">
-          Quero agendar minha sessão
+        <a href="#treinamentos" class="btn">
+          Ver treinamentos
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
-        <a href="#como-funciona" class="scroll-cue">
-          Veja como funciona
+        <a href="#sobre" class="scroll-cue">
+          Conhecer o Fred
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
         </a>
       </div>
     </div>
-    <div class="hero-mark" aria-hidden="true">
-      <svg viewBox="0 40 480 380">
+    <div class="hero-visual">
+      <div class="hero-photo-frame">
+        <img src="fred.png" alt="Fred Candiota, treinador de marketing, vendas, produto e pessoas" class="hero-photo">
+        <div class="hero-photo-fade"></div>
+      </div>
+      <div class="hero-mark" aria-hidden="true">
+      <svg viewBox="0 50 480 400">
         <circle cx="240" cy="240" r="100" fill="var(--accent)" fill-opacity="0.08" stroke="var(--accent)" stroke-width="1.6"/>
-        <text x="240" y="234" font-family="Poppins" font-size="14" font-weight="700" letter-spacing="0.04em" fill="var(--ink)" text-anchor="middle">SEU</text>
-        <text x="240" y="254" font-family="Poppins" font-size="14" font-weight="700" letter-spacing="0.04em" fill="var(--ink)" text-anchor="middle">DESAFIO</text>
+        <text x="240" y="233" font-family="Poppins" font-size="14" font-weight="700" letter-spacing="0.04em" fill="var(--ink)" text-anchor="middle">SEUS</text>
+        <text x="240" y="253" font-family="Poppins" font-size="12" font-weight="700" letter-spacing="0.02em" fill="var(--ink)" text-anchor="middle">RESULTADOS</text>
 
         <g stroke="var(--accent)" stroke-opacity="0.4" stroke-width="1.1" stroke-dasharray="2 3">
-          <line x1="240" y1="140" x2="240" y2="90"/>
-          <line x1="335.1" y1="209" x2="392.6" y2="189"/>
-          <line x1="298.8" y1="320.9" x2="332.6" y2="368.5"/>
-          <line x1="181.2" y1="320.9" x2="147.4" y2="368.5"/>
-          <line x1="144.9" y1="209.1" x2="87.4" y2="189"/>
+          <line x1="240" y1="140" x2="240" y2="100"/>
+          <line x1="340" y1="240" x2="380" y2="240"/>
+          <line x1="240" y1="340" x2="240" y2="380"/>
+          <line x1="140" y1="240" x2="100" y2="240"/>
         </g>
         <g font-family="Poppins" font-size="13" font-weight="600" fill="var(--accent-deep)">
           <circle cx="240" cy="90" r="3" fill="var(--accent)"/>
           <text x="240" y="76" text-anchor="middle">Marketing</text>
-          <circle cx="392.6" cy="189" r="3" fill="var(--accent)"/>
-          <text x="403" y="193" text-anchor="start">Vendas</text>
-          <circle cx="332.6" cy="368.5" r="3" fill="var(--accent)"/>
-          <text x="344" y="384" text-anchor="start">Produto</text>
-          <circle cx="147.4" cy="368.5" r="3" fill="var(--accent)"/>
-          <text x="136" y="384" text-anchor="end">Gestão</text>
-          <circle cx="87.4" cy="189" r="3" fill="var(--accent)"/>
-          <text x="77" y="193" text-anchor="end">IA e SaaS</text>
+          <circle cx="390" cy="240" r="3" fill="var(--accent)"/>
+          <text x="402" y="244" text-anchor="start">Vendas</text>
+          <circle cx="240" cy="390" r="3" fill="var(--accent)"/>
+          <text x="240" y="410" text-anchor="middle">Produto</text>
+          <circle cx="90" cy="240" r="3" fill="var(--accent)"/>
+          <text x="78" y="244" text-anchor="end">Pessoas</text>
         </g>
       </svg>
-    </div>
-  </div>
-</section>
-
-<section class="para-quem section-accent">
-  <div class="wrap">
-    <div data-reveal>
-      <p class="eyebrow">Para quem é</p>
-      <h2>Para quem sabe que sempre existe uma próxima decisão</h2>
-      <p class="body-text" style="margin-top:16px;">Para empreendedores, gestores e profissionais que sabem que, no dia a dia de um negócio, sempre existe uma próxima decisão a ser tomada.</p>
-      <ul class="persona-list">
-        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Não precisa (ou não quer) contratar uma consultoria de vários meses.</li>
-        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Quer acesso a uma visão estratégica quando surge um desafio importante.</li>
-        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Prefere trazer o problema logo, em vez de carregar a dúvida por semanas.</li>
-      </ul>
-    </div>
-    <div data-reveal>
-      <div style="height:100%; display:flex; align-items:center;">
-        <div class="highlight-box">
-          Você traz o desafio. Nós pensamos juntos. Você sai com uma decisão e um plano.
-        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="problema">
+<section class="porque">
   <div class="wrap" data-reveal>
     <p class="eyebrow">Por que isso importa</p>
-    <h2>Na maioria das vezes, o que falta não é mais informação</h2>
-    <p class="body-text" style="margin-top:20px;">Pode ser uma campanha que não performou, uma queda nas vendas, uma dúvida de precificação, um problema no produto, uma contratação importante, uma decisão de gestão ou até a percepção de que existe uma oportunidade de usar tecnologia e IA pra melhorar o negócio.</p>
-    <p class="body-text">Só que, na maior parte das vezes, o problema não é falta de informação. É clareza pra decidir e agir.</p>
-    <p class="callout">A Sessão Estratégica Individual existe pra isso: te ajudar a destravar um desafio específico, tomar uma decisão com mais segurança e sair com um plano de ação claro.</p>
+    <h2>Ninguém bate meta todo mês por acaso</h2>
+    <p class="body-text" style="margin-top:20px;">Resultado consistente não vem de sorte, vem de time preparado. Quando só o dono se desenvolve e o time fica parado, a empresa cresce até onde o dono aguenta carregar sozinho. Quando o time inteiro treina junto, na mesma direção, o negócio destrava de verdade.</p>
+    <p class="body-text">Por isso treino tanto donos de empresa quanto colaboradores: marketing, vendas, produto e pessoas são frentes que precisam evoluir juntas, o tempo todo, não só quando aparece um problema.</p>
+    <p class="callout">Treinamento constante não é custo. É o que sustenta performance alta mês após mês.</p>
   </div>
 </section>
 
-<section id="temas" class="section-accent">
+<section id="formatos">
   <div class="wrap">
-    <div class="temas-head" data-reveal>
-      <p class="eyebrow">Temas e objetivo</p>
-      <h2>Assuntos que podemos trabalhar na sua sessão</h2>
-      <p class="lede">Não é uma consultoria completa sobre toda a empresa em 90 minutos. É escolher um desafio importante, mergulhar nele e transformar dúvidas, problemas ou possibilidades em decisões e ações concretas. Um exemplo do que você pode trazer em cada tema:</p>
+    <div class="formatos-head" data-reveal>
+      <p class="eyebrow">Formatos</p>
+      <h2>Treinamentos públicos e empresariais</h2>
+      <p class="lede">Duas formas de treinar, pro momento que fizer mais sentido pra você.</p>
     </div>
-    <div class="tema-blocks" data-reveal>
-      <div class="tema-block">
-        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10v4a1 1 0 0 0 1 1h2l7 4V5l-7 4H4a1 1 0 0 0-1 1Z"/><path d="M17 8.5a4.5 4.5 0 0 1 0 7"/></svg></span>
-        <div>
-          <h3>Marketing</h3>
-          <ul class="tema-questions">
-            <li>Tenho várias ideias de aquisição, mas não sei onde focar.</li>
-            <li>Não sei se meu posicionamento está certo pro público que eu quero atrair.</li>
-          </ul>
-        </div>
+    <div class="formatos-grid" data-reveal>
+      <div class="formato-card">
+        <span class="tag">Público</span>
+        <h3>Turmas abertas</h3>
+        <p>Data marcada, formação já pronta. Você (ou alguém do seu time) entra numa turma ao lado de outros profissionais e donos de negócio. Ótimo pra começar rápido, sem esperar.</p>
       </div>
-      <div class="tema-block">
-        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 6h6v6"/></svg></span>
-        <div>
-          <h3>Vendas</h3>
-          <ul class="tema-questions">
-            <li>Minha empresa está vendendo pouco. Onde está o problema?</li>
-            <li>Como posso melhorar meu processo comercial?</li>
-          </ul>
-        </div>
-      </div>
-      <div class="tema-block">
-        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7.5 12 3l9 4.5-9 4.5-9-4.5Z"/><path d="M3 7.5V16l9 4.5 9-4.5V7.5"/><path d="M12 12v8.5"/></svg></span>
-        <div>
-          <h3>Produto</h3>
-          <ul class="tema-questions">
-            <li>Como devo precificar meu produto?</li>
-            <li>Tenho uma ideia de produto novo, mas não sei se vale a pena tirar do papel.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="tema-block">
-        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="17" rx="1.5"/><path d="M8 3.5v2M16 3.5v2M7.5 11h9M7.5 15h9"/></svg></span>
-        <div>
-          <h3>Gestão</h3>
-          <ul class="tema-questions">
-            <li>Estou pensando em mudar meu modelo de negócio. Faz sentido?</li>
-            <li>Preciso organizar melhor a operação e a gestão da empresa.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="tema-block">
-        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="6" width="12" height="12" rx="1.5"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></svg></span>
-        <div>
-          <h3>IA e criação de soluções</h3>
-          <p class="tema-desc">No tema de IA e SaaS, a ideia é analisar o seu negócio e pensar em soluções que possam ser criadas pra melhorar a operação, automatizar processos, atender melhor os clientes, aumentar produtividade ou até gerar uma nova fonte de receita. Você não precisa chegar com uma ideia pronta: podemos partir do próprio negócio e dos problemas que você já enfrenta.</p>
-          <ul class="tema-questions">
-            <li>Existe alguma solução com IA que eu poderia criar pro meu negócio?</li>
-            <li>Que tipo de ferramenta ou SaaS faria sentido desenvolver pra minha operação?</li>
-            <li>Tenho um processo muito manual. Será que dá pra transformar isso numa solução com IA?</li>
-          </ul>
-        </div>
+      <div class="formato-card">
+        <span class="tag">Empresarial</span>
+        <h3>Dentro da sua empresa</h3>
+        <p>Treinamento sob medida, focado no time que você já tem e nos desafios reais do seu negócio. Ideal quando o objetivo é treinar todo mundo junto, no mesmo ritmo.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="como-funciona" id="como-funciona">
+<section id="treinamentos" class="treinamentos">
   <div class="wrap">
-    <div class="como-funciona-head" data-reveal>
-      <p class="eyebrow">Como funciona</p>
-      <h2>Do agendamento ao plano de ação</h2>
+    <div class="treinamentos-head" data-reveal>
+      <p class="eyebrow">Treinamentos</p>
+      <h2>Seis formações pra desenvolver pessoas e empresas</h2>
     </div>
-    <div class="steps-list" data-reveal>
-      <div class="step">
-        <span class="step-num">01</span>
-        <div>
-          <h3>Você contrata a sessão</h3>
-          <p>Escolhe um horário disponível e realiza o pagamento.</p>
-        </div>
+
+    <div class="training-featured" data-reveal>
+      <span class="training-tag">Marketing · Vendas · Produto</span>
+      <h3>Imersão MVP</h3>
+      <p class="body-text">A formação completa nos três pilares que sustentam qualquer negócio: como atrair, como vender e o que vender.</p>
+      <ul class="tag-list">
+        <li>Posicionamento</li>
+        <li>Processo comercial</li>
+        <li>Criação de produtos</li>
+        <li>Métricas</li>
+        <li>Técnicas de venda</li>
+        <li>Ofertas</li>
+      </ul>
+    </div>
+
+    <div class="training-grid" data-reveal>
+      <div class="training-card">
+        <span class="training-tag">Gestão</span>
+        <h3>Agências de marketing na visão do dono</h3>
+        <p class="body-text">Pra dono que terceiriza o marketing mas precisa saber cobrar, entender e gerenciar os resultados da própria agência.</p>
+        <ul class="tag-list">
+          <li>Gestão de tempo com agências</li>
+          <li>Produção de materiais</li>
+          <li>Comunicação interna e externa</li>
+          <li>Análise de métricas</li>
+          <li>Reuniões e rituais</li>
+        </ul>
       </div>
-      <div class="step">
-        <span class="step-num">02</span>
-        <div>
-          <h3>Responde um formulário de diagnóstico</h3>
-          <p>Antes da sessão, você me conta sobre o negócio, o cenário atual e qual é o principal desafio que quer trabalhar. Isso permite que a nossa conversa já comece com mais contexto e objetividade.</p>
-        </div>
+
+      <div class="training-card">
+        <span class="training-tag">Vendas</span>
+        <h3>Comercial de elite</h3>
+        <p class="body-text">Pra vendedores e times de vendas que querem transformar processo em resultado, todo mês.</p>
+        <ul class="tag-list">
+          <li>Processo comercial</li>
+          <li>CRM e gestão de pipeline</li>
+          <li>Técnicas e estratégias de venda</li>
+          <li>Objeções e follow-up</li>
+          <li>Ferramentas</li>
+        </ul>
       </div>
-      <div class="step">
-        <span class="step-num">03</span>
-        <div>
-          <h3>Fazemos uma sessão individual de 90 minutos</h3>
-          <p>Vamos aprofundar o problema, analisar o cenário, organizar as possibilidades e definir o melhor caminho.</p>
-          <p>A ideia não é ficar apenas na teoria. Vamos trabalhar pra transformar o desafio em decisões práticas.</p>
-        </div>
+
+      <div class="training-card">
+        <span class="training-tag">Marketing</span>
+        <h3>Marketing na prática</h3>
+        <p class="body-text">Marketing de verdade, aplicado. Pra marketeiros, donos de empresa e times de marketing.</p>
+        <ul class="tag-list">
+          <li>Posicionamento</li>
+          <li>Produção de conteúdo</li>
+          <li>Funil de conteúdo</li>
+          <li>Branding pessoal</li>
+          <li>Métricas</li>
+          <li>Organização</li>
+          <li>Ferramentas</li>
+        </ul>
       </div>
-      <div class="step">
-        <span class="step-num">04</span>
-        <div>
-          <h3>Você sai com um plano de ação</h3>
-          <p>Ao final da sessão, você terá mais clareza sobre o que fazer, quais decisões tomar e quais devem ser os próximos passos.</p>
-        </div>
+
+      <div class="training-card">
+        <span class="training-tag">Produto</span>
+        <h3>Produtos digitais e não digitais</h3>
+        <p class="body-text">Como criar produtos, digitais ou não, e transformar isso em oferta que vende.</p>
+        <ul class="tag-list">
+          <li>Definição de ICP</li>
+          <li>Criação de produtos</li>
+          <li>Desenvolvimento de ofertas</li>
+          <li>Produtização de entregáveis</li>
+        </ul>
       </div>
-      <div class="step">
-        <span class="step-num">05</span>
-        <div>
-          <h3>Você conta com 30 dias de suporte pelo WhatsApp</h3>
-          <p>Depois da sessão, você ainda terá 30 dias de suporte pelo WhatsApp pra tirar dúvidas relacionadas ao plano de ação, compartilhar avanços e pedir direcionamento pontual durante a execução.</p>
-          <p>Porque muitas vezes uma nova dúvida aparece justamente quando você começa a colocar o plano em prática.</p>
-        </div>
+
+      <div class="training-card">
+        <span class="training-tag">Pessoas</span>
+        <h3>Pessoas</h3>
+        <p class="body-text">Antes de gerir um time, é preciso gerir a si mesmo: rotina, comportamento e comunicação.</p>
+        <ul class="tag-list">
+          <li>Gestão de tempo</li>
+          <li>Comunicação e oratória</li>
+          <li>Resolução de problemas</li>
+          <li>Habilidade de improviso</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="cta-final section-accent" id="final">
+<section class="agenda">
+  <div class="wrap">
+    <div class="agenda-head" data-reveal>
+      <p class="eyebrow">Agenda</p>
+      <h2>Próximos treinamentos públicos</h2>
+    </div>
+    <div class="agenda-list" data-reveal>
+      <div class="agenda-item">
+        <div class="agenda-date">26/09<br>Sábado</div>
+        <div>
+          <h3>Agências de marketing na visão do dono</h3>
+          <p class="agenda-details">3h de treinamento, ao vivo e online, das 9h às 12h. Inclui ferramentas, gravação e materiais do treinamento.</p>
+        </div>
+        <a href="https://wa.me/5553999246827?text=Fala%20Fred%2C%20quero%20me%20inscrever%20no%20treinamento%20Ag%C3%AAncias%20de%20marketing%20na%20vis%C3%A3o%20do%20dono%20do%20dia%2026%2F09!" class="btn btn-sm" target="_blank" rel="noopener">Quero me inscrever</a>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-date">03/10</div>
+        <div>
+          <h3>Marketing e vendas, com Fred Candiota e Leandro Oliveira</h3>
+          <p class="agenda-details">Presencial, 3h de treinamento intensivo.</p>
+        </div>
+        <a href="https://wa.me/5553999246827?text=Fala%20Fred%2C%20quero%20me%20inscrever%20no%20treinamento%20Marketing%20e%20Vendas%20do%20dia%2003%2F10!" class="btn btn-sm" target="_blank" rel="noopener">Quero me inscrever</a>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-date">20/10, 27/10<br>e 03/11</div>
+        <div>
+          <h3>Imersão MVP</h3>
+          <p class="agenda-details">3 terças-feiras, marketing, vendas e produto, ao vivo e online. Grupo de membros, suporte, 1 encontro individual com Fred Candiota, além de ferramentas, gravação e materiais do treinamento.</p>
+        </div>
+        <a href="https://wa.me/5553999246827?text=Fala%20Fred%2C%20quero%20me%20inscrever%20na%20Imers%C3%A3o%20MVP%20que%20come%C3%A7a%20dia%2020%2F10!" class="btn btn-sm" target="_blank" rel="noopener">Quero me inscrever</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre" class="sobre">
+  <div class="wrap">
+    <div data-reveal>
+      <p class="eyebrow">Quem treina</p>
+      <h2>Fred Candiota</h2>
+      <p class="body-text" style="margin-top:20px;">Há 10 anos trabalhando com marketing, vendas e produto. Já teve agência, atendendo clientes de diversos segmentos, participou de grandes lançamentos digitais e não digitais, incluindo empreendimentos, e foi co-produtor de uma mentoria que saiu do zero absoluto e chegou a 35 mentorados faturando 100 mil com high ticket em poucos meses.</p>
+      <ul class="sobre-highlights">
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Treinador de pessoas e empresas em marketing, vendas, produto e pessoas.</li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Criador da Imersão MVP e de todos os treinamentos acima.</li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Consultor da Dale Carnegie, a maior empresa de treinamentos em desenvolvimento pessoal do mundo, e está assumindo, com o mentor Leandro Oliveira, uma franquia Dale Carnegie na região de Bagé e Livramento.</li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Mais de 15 empresas recorrentes em consultoria, com recordes de vendas em pouco tempo.</li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Carnegiano, se formando na turma 62 do Dale Carnegie Course, e em treinamento pelo Instituto Eneagrama.</li>
+      </ul>
+      <p class="sobre-personal">Marido da Luana, pai do Guto e da Gabi. Apaixonado por compartilhar conhecimento, e faz isso com prazer e assertividade.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
   <div class="wrap" data-reveal>
-    <div class="detalhes-grid">
-      <div class="detalhe">
-        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
-        <span class="label">Duração</span>
-        <span class="value">90 minutos</span>
-      </div>
-      <div class="detalhe">
-        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-4 3.1-6.5 7-6.5s7 2.5 7 6.5"/></svg></span>
-        <span class="label">Formato</span>
-        <span class="value">Individual, online ou presencial</span>
-      </div>
-      <div class="detalhe">
-        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.55L3 20l1.05-5.4A8.5 8.5 0 1 1 21 11.5Z"/></svg></span>
-        <span class="label">Suporte</span>
-        <span class="value">30 dias pelo WhatsApp</span>
-      </div>
-    </div>
     <p class="eyebrow" style="justify-content:center;">Próximo passo</p>
-    <h2>Bora destravar essa decisão?</h2>
-    <p class="lede">Marca sua Sessão Estratégica Individual e saia com clareza pra decidir e agir.</p>
-    <a href="https://wa.me/5553999246827?text=Fala%20Fred%2C%20quero%20agendar%20minha%20Sess%C3%A3o%20Estrat%C3%A9gica%20Individual!" class="btn" target="_blank" rel="noopener">
-      Quero agendar minha sessão
+    <h2>Bora treinar você e o seu time?</h2>
+    <p class="lede">Fale comigo e vamos ver qual treinamento faz mais sentido pro seu momento.</p>
+    <a href="https://wa.me/5553999246827?text=Fala%20Fred%2C%20quero%20treinar%20eu%20e%2Fou%20meu%20time!" class="btn" target="_blank" rel="noopener">
+      Quero treinar meu time
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -723,9 +744,9 @@
   <div class="wrap">
     <div class="brand-mark">
       <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
-      Sessão Estratégica Individual
+      Treinamento para pessoas e empresas
     </div>
-    <p class="fine">Com Fred Candiota, pra empreendedores e gestores.</p>
+    <p class="fine">Com Fred Candiota, marketing, vendas, produto e pessoas.</p>
   </div>
 </footer>
 
