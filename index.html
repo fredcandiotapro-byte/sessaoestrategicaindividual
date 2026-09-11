@@ -153,9 +153,6 @@
     overflow:hidden;
   }
   .hero-body{
-    width:100%;
-    margin-left:0;
-    margin-right:0;
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:clamp(32px, 6vw, 72px);
@@ -230,12 +227,20 @@
     50%{transform:translateY(4px);}
   }
 
-  /* ---------- SECTION: POR QUE TREINAR ---------- */
-  .porque{
-    background:var(--surface);
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
+  /* ---------- DARK SECTIONS ---------- */
+  .section-dark{
+    background:var(--ink);
   }
+  .section-dark .eyebrow{color:var(--accent);}
+  .section-dark h2, .section-dark h3{color:#fff;}
+  .section-dark .body-text,
+  .section-dark .lede,
+  .section-dark .agenda-details{color:rgba(255,255,255,0.72);}
+  .section-dark .callout{color:#fff;}
+  .section-dark .agenda-date{color:var(--accent);}
+  .section-dark .agenda-item{border-bottom-color:rgba(255,255,255,0.15);}
+
+  /* ---------- SECTION: POR QUE TREINAR ---------- */
   .porque .wrap{max-width:800px;}
   .porque p + p{margin-top:16px;}
   .porque .callout{
@@ -244,7 +249,6 @@
     border-left:3px solid var(--accent);
     font-size:1.08rem;
     font-weight:500;
-    color:var(--ink);
   }
 
   /* ---------- SECTION: FORMATOS ---------- */
@@ -284,6 +288,8 @@
   }
 
   /* ---------- SECTION: TREINAMENTOS ---------- */
+  #formatos{padding-bottom:clamp(24px, 4vw, 48px);}
+  .treinamentos{padding-top:0;}
   .treinamentos-head{max-width:700px;margin-bottom:44px;}
   .training-featured{
     border:1.5px solid var(--accent);
@@ -358,11 +364,6 @@
   .training-card .btn-sm, .training-featured .btn-sm{margin-top:auto;align-self:flex-start;}
 
   /* ---------- SECTION: AGENDA ---------- */
-  .agenda{
-    background:var(--surface);
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-  }
   .agenda-head{max-width:700px;margin-bottom:44px;}
   .agenda-list{
     display:flex;
@@ -435,8 +436,6 @@
   /* ---------- SECTION: CTA FINAL ---------- */
   .cta-final{
     text-align:center;
-    background:var(--surface);
-    border-top:1px solid var(--line);
   }
   .cta-final .wrap{
     display:flex;
@@ -553,7 +552,7 @@
   </div>
 </section>
 
-<section class="porque">
+<section class="porque section-dark">
   <div class="wrap" data-reveal>
     <p class="eyebrow">Por que isso importa</p>
     <h2>Ninguém bate meta todo mês por acaso</h2>
@@ -675,7 +674,7 @@
   </div>
 </section>
 
-<section class="agenda">
+<section class="agenda section-dark">
   <div class="wrap">
     <div class="agenda-head" data-reveal>
       <p class="eyebrow">Agenda</p>
@@ -728,7 +727,7 @@
   </div>
 </section>
 
-<section class="cta-final">
+<section class="cta-final section-dark">
   <div class="wrap" data-reveal>
     <p class="eyebrow" style="justify-content:center;">Próximo passo</p>
     <h2>Bora treinar você e o seu time?</h2>
