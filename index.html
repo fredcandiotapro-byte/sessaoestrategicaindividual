@@ -409,6 +409,32 @@
   }
   .section-dark .agenda-price .pre{color:rgba(255,255,255,0.6);}
 
+  .agenda-toggle{margin-top:14px;}
+  .agenda-toggle summary{
+    cursor:pointer;
+    list-style:none;
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    font-size:0.85rem;
+    font-weight:600;
+    color:var(--accent);
+  }
+  .agenda-toggle summary::-webkit-details-marker{display:none;}
+  .agenda-toggle summary .chevron{width:13px;height:13px;transition:transform .2s ease;}
+  .agenda-toggle[open] summary .chevron{transform:rotate(180deg);}
+  .agenda-toggle .tag-list{margin-top:14px;}
+  .agenda-toggle p{
+    margin-top:12px;
+    font-size:0.9rem;
+    color:rgba(255,255,255,0.72);
+  }
+  .section-dark .tag-list li{
+    background:rgba(255,255,255,0.08);
+    border-color:rgba(255,255,255,0.16);
+    color:rgba(255,255,255,0.85);
+  }
+
   /* ---------- SECTION: SOBRE ---------- */
   .sobre-grid{
     max-width:980px;
@@ -698,6 +724,7 @@
         <ul class="tag-list">
           <li>Gestão de tempo</li>
           <li>Comunicação e oratória</li>
+          <li>Técnica de fazer perguntas</li>
           <li>Resolução de problemas</li>
           <li>Habilidade de improviso</li>
         </ul>
@@ -706,7 +733,7 @@
   </div>
 </section>
 
-<section class="agenda section-dark">
+<section id="agenda" class="agenda section-dark">
   <div class="wrap">
     <div class="agenda-head" data-reveal>
       <p class="eyebrow">Agenda</p>
@@ -718,7 +745,17 @@
         <div>
           <h3>Agências de marketing na visão do dono</h3>
           <p class="agenda-details">3h de treinamento, ao vivo e online, das 9h às 12h. Inclui ferramentas, gravação e materiais do treinamento.</p>
-          <p class="agenda-price">R$ 297 <span class="pre">(pré-vendas)</span></p>
+          <p class="agenda-price">R$ 297 <span class="pre">(pré-vendas até o dia 18/09)</span></p>
+          <details class="agenda-toggle">
+            <summary>Ver conteúdo <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <ul class="tag-list">
+              <li>Gestão de tempo com agências</li>
+              <li>Produção de materiais</li>
+              <li>Comunicação interna e externa</li>
+              <li>Análise de métricas</li>
+              <li>Reuniões e rituais</li>
+            </ul>
+          </details>
         </div>
         <a href="https://wa.me/5553999246827?text=Fala%20Fred%2C%20quero%20saber%20mais%20sobre%20o%20treinamento%20de%20ag%C3%AAncias%20de%20marketing%20na%20vis%C3%A3o%20do%20dono." class="btn btn-sm" target="_blank" rel="noopener">Quero me inscrever</a>
       </div>
@@ -728,6 +765,10 @@
           <h3>Marketing e vendas, com Fred Candiota e Leandro Oliveira</h3>
           <p class="agenda-details">Presencial, 3h de treinamento intensivo.</p>
           <p class="agenda-price">R$ 297</p>
+          <details class="agenda-toggle">
+            <summary>Ver conteúdo <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <p>Entre em contato pra saber mais sobre os conteúdos.</p>
+          </details>
         </div>
         <a href="https://wa.me/5553999246827?text=Fala%20Fred%2C%20quero%20saber%20mais%20sobre%20o%20treinamento%20de%20marketing%20e%20vendas%20teu%20e%20do%20Leandro." class="btn btn-sm" target="_blank" rel="noopener">Quero me inscrever</a>
       </div>
@@ -736,7 +777,19 @@
         <div>
           <h3>Imersão MVP</h3>
           <p class="agenda-details">4 terças-feiras, marketing, vendas, produto e pessoas, ao vivo e online. Grupo de membros, suporte, 1 encontro individual com Fred Candiota, além de ferramentas, gravação e materiais do treinamento.</p>
-          <p class="agenda-price">R$ 497 <span class="pre">(pré-vendas)</span></p>
+          <p class="agenda-price">R$ 497 <span class="pre">(pré-vendas até dia 1/10)</span></p>
+          <details class="agenda-toggle">
+            <summary>Ver conteúdo <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <ul class="tag-list">
+              <li>Posicionamento</li>
+              <li>Processo comercial</li>
+              <li>Criação de produtos</li>
+              <li>Métricas</li>
+              <li>Técnicas de venda</li>
+              <li>Ofertas</li>
+              <li>Gestão de tempo</li>
+            </ul>
+          </details>
         </div>
         <a href="https://wa.me/5553999246827?text=Fala%20Fred%2C%20quero%20saber%20mais%20sobre%20a%20Imers%C3%A3o%20MVP." class="btn btn-sm" target="_blank" rel="noopener">Quero me inscrever</a>
       </div>
@@ -770,7 +823,7 @@
     <p class="eyebrow" style="justify-content:center;">Próximo passo</p>
     <h2>Bora treinar você e o seu time?</h2>
     <p class="lede">Fale comigo e vamos ver qual treinamento faz mais sentido pro seu momento.</p>
-    <a href="https://wa.me/5553999246827?text=Fala%20Fred%2C%20quero%20treinar%20eu%20e%2Fou%20meu%20time!" class="btn" target="_blank" rel="noopener">
+    <a href="#agenda" class="btn">
       Quero treinar meu time
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
     </a>
