@@ -435,6 +435,23 @@
     color:rgba(255,255,255,0.85);
   }
 
+  .content-groups{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+  .content-group-label{
+    display:block;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:0.07em;
+    text-transform:uppercase;
+    color:var(--accent-deep);
+    margin-bottom:8px;
+  }
+  .section-dark .content-group-label{color:var(--accent);}
+  .content-group .tag-list{margin:0;}
+
   /* ---------- SECTION: SOBRE ---------- */
   .sobre-grid{
     max-width:980px;
@@ -652,15 +669,49 @@
       <span class="training-tag">Marketing · Vendas · Produto · Pessoas</span>
       <h3>Imersão MVP</h3>
       <p class="body-text">A formação completa nos quatro pilares que sustentam qualquer negócio: como atrair, como vender, o que vender e quem faz tudo isso acontecer.</p>
-      <ul class="tag-list">
-        <li>Posicionamento</li>
-        <li>Processo comercial</li>
-        <li>Criação de produtos</li>
-        <li>Métricas</li>
-        <li>Técnicas de venda</li>
-        <li>Ofertas</li>
-        <li>Gestão de tempo</li>
-      </ul>
+      <div class="content-groups">
+        <div class="content-group">
+          <span class="content-group-label">Marketing</span>
+          <ul class="tag-list">
+            <li>Posicionamento</li>
+            <li>Produção de conteúdo</li>
+            <li>Funil de conteúdo</li>
+            <li>Branding pessoal</li>
+            <li>Métricas</li>
+            <li>Organização</li>
+            <li>Ferramentas</li>
+          </ul>
+        </div>
+        <div class="content-group">
+          <span class="content-group-label">Vendas</span>
+          <ul class="tag-list">
+            <li>Processo comercial</li>
+            <li>CRM e gestão de pipeline</li>
+            <li>Técnicas e estratégias de venda</li>
+            <li>Objeções e follow-up</li>
+            <li>Ferramentas</li>
+          </ul>
+        </div>
+        <div class="content-group">
+          <span class="content-group-label">Produto</span>
+          <ul class="tag-list">
+            <li>Definição de ICP</li>
+            <li>Criação de produtos</li>
+            <li>Desenvolvimento de ofertas</li>
+            <li>Produtização de entregáveis</li>
+          </ul>
+        </div>
+        <div class="content-group">
+          <span class="content-group-label">Pessoas</span>
+          <ul class="tag-list">
+            <li>Gestão de tempo</li>
+            <li>Comunicação e oratória</li>
+            <li>Técnica de fazer perguntas</li>
+            <li>Resolução de problemas</li>
+            <li>Habilidade de improviso</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div class="training-grid" data-reveal>
@@ -780,15 +831,49 @@
           <p class="agenda-price">R$ 497 <span class="pre">(pré-vendas até dia 1/10)</span></p>
           <details class="agenda-toggle">
             <summary>Ver conteúdo <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 9l6 6 6-6"/></svg></summary>
-            <ul class="tag-list">
-              <li>Posicionamento</li>
-              <li>Processo comercial</li>
-              <li>Criação de produtos</li>
-              <li>Métricas</li>
-              <li>Técnicas de venda</li>
-              <li>Ofertas</li>
-              <li>Gestão de tempo</li>
-            </ul>
+            <div class="content-groups">
+              <div class="content-group">
+                <span class="content-group-label">Marketing</span>
+                <ul class="tag-list">
+                  <li>Posicionamento</li>
+                  <li>Produção de conteúdo</li>
+                  <li>Funil de conteúdo</li>
+                  <li>Branding pessoal</li>
+                  <li>Métricas</li>
+                  <li>Organização</li>
+                  <li>Ferramentas</li>
+                </ul>
+              </div>
+              <div class="content-group">
+                <span class="content-group-label">Vendas</span>
+                <ul class="tag-list">
+                  <li>Processo comercial</li>
+                  <li>CRM e gestão de pipeline</li>
+                  <li>Técnicas e estratégias de venda</li>
+                  <li>Objeções e follow-up</li>
+                  <li>Ferramentas</li>
+                </ul>
+              </div>
+              <div class="content-group">
+                <span class="content-group-label">Produto</span>
+                <ul class="tag-list">
+                  <li>Definição de ICP</li>
+                  <li>Criação de produtos</li>
+                  <li>Desenvolvimento de ofertas</li>
+                  <li>Produtização de entregáveis</li>
+                </ul>
+              </div>
+              <div class="content-group">
+                <span class="content-group-label">Pessoas</span>
+                <ul class="tag-list">
+                  <li>Gestão de tempo</li>
+                  <li>Comunicação e oratória</li>
+                  <li>Técnica de fazer perguntas</li>
+                  <li>Resolução de problemas</li>
+                  <li>Habilidade de improviso</li>
+                </ul>
+              </div>
+            </div>
           </details>
         </div>
         <a href="https://wa.me/5553999246827?text=Fala%20Fred%2C%20quero%20saber%20mais%20sobre%20a%20Imers%C3%A3o%20MVP." class="btn btn-sm" target="_blank" rel="noopener">Quero me inscrever</a>
