@@ -367,6 +367,19 @@
     flex-wrap:wrap;
     gap:16px;
   }
+  .live-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px 32px;
+    margin-top:28px;
+  }
+  .live-meta-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .live-meta-item svg{width:24px;height:24px;color:var(--accent);flex:none;}
+  .live-meta-item span{font-size:1.15rem;font-weight:700;color:#fff;}
   .cta-row .live-price{margin:0;}
   .training-featured .btn-sm{margin-top:auto;align-self:flex-start;}
 
@@ -522,36 +535,30 @@
   </div>
 </section>
 
-<section class="porque section-dark">
-  <div class="wrap porque-grid">
-    <div data-reveal>
-      <p class="eyebrow">Por que isso importa</p>
-      <h2>Ninguém bate meta todo mês por acaso</h2>
-      <p class="body-text" style="margin-top:20px;">Resultado consistente não vem de sorte, vem de time preparado. Quando só o dono se desenvolve e o time fica parado, a empresa cresce até onde o dono aguenta carregar sozinho. Quando o time inteiro treina junto, na mesma direção, o negócio destrava de verdade.</p>
-      <p class="body-text">Por isso treino tanto donos de empresa quanto colaboradores: marketing, vendas e produto são frentes que precisam evoluir juntas, o tempo todo, não só quando aparece um problema.</p>
-      <p class="callout">Treinamento constante não é custo. É o que sustenta performance alta mês após mês.</p>
+<section id="aulas-ao-vivo" class="section-dark">
+  <div class="wrap" data-reveal>
+    <p class="eyebrow">Aulas ao vivo</p>
+    <h2>Próxima aula: o tripé que sustenta qualquer empresa — marketing, vendas e produto</h2>
+    <p class="lede" style="margin-top:14px;">Como diagnosticar os gargalos e definir planos de ação.</p>
+    <div class="live-meta">
+      <div class="live-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="16" y1="3" x2="16" y2="7"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span>20/09</span>
+      </div>
+      <div class="live-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+        <span>19h</span>
+      </div>
+      <div class="live-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41 13.42 20.58a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82Z"/><circle cx="7" cy="7" r="1"/></svg>
+        <span>R$ 37,00</span>
+      </div>
     </div>
-    <div class="porque-visual" data-reveal aria-hidden="true">
-      <svg viewBox="0 50 480 380">
-        <circle cx="240" cy="240" r="100" fill="var(--accent)" fill-opacity="0.1" stroke="var(--accent)" stroke-width="1.6"/>
-        <text x="240" y="233" font-family="Poppins" font-size="14" font-weight="700" letter-spacing="0.04em" fill="#fff" text-anchor="middle">SEUS</text>
-        <text x="240" y="253" font-family="Poppins" font-size="12" font-weight="700" letter-spacing="0.02em" fill="#fff" text-anchor="middle">RESULTADOS</text>
-
-        <g stroke="var(--accent)" stroke-opacity="0.5" stroke-width="1.1" stroke-dasharray="2 3">
-          <line x1="240" y1="140" x2="240" y2="100"/>
-          <line x1="326.6" y1="290" x2="361.2" y2="310"/>
-          <line x1="153.4" y1="290" x2="118.8" y2="310"/>
-        </g>
-        <g font-family="Poppins" font-size="13" font-weight="600" fill="var(--accent)">
-          <circle cx="240" cy="90" r="3" fill="var(--accent)"/>
-          <text x="240" y="76" text-anchor="middle">Marketing</text>
-          <circle cx="369.9" cy="315" r="3" fill="var(--accent)"/>
-          <text x="381.9" y="319" text-anchor="start">Vendas</text>
-          <circle cx="110.1" cy="315" r="3" fill="var(--accent)"/>
-          <text x="98.1" y="319" text-anchor="end">Produto</text>
-        </g>
-      </svg>
-    </div>
+    <p class="body-text" style="margin-top:16px;">Ao vivo e online · Aula de <strong>2h</strong>.</p>
+    <a href="https://wa.me/5553999246827?text=Fala%20Fred%2C%20quero%20garantir%20minha%20vaga%20na%20aula%20ao%20vivo." class="btn" target="_blank" rel="noopener" style="margin-top:28px;">
+      Garantir vaga
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
   </div>
 </section>
 
@@ -629,17 +636,36 @@
   </div>
 </section>
 
-<section id="aulas-ao-vivo" class="section-dark">
-  <div class="wrap" data-reveal>
-    <p class="eyebrow">Aulas ao vivo</p>
-    <h2>Próxima aula: o tripé que sustenta qualquer empresa — marketing, vendas e produto</h2>
-    <p class="lede" style="margin-top:14px;">Como diagnosticar os gargalos e definir planos de ação.</p>
-    <p class="body-text" style="margin-top:24px;">A aula acontecerá dia <strong>20/09</strong>, às <strong>19h</strong>, ao vivo e online.</p>
-    <p class="body-text" style="margin-top:8px;">O investimento é de <strong>R$ 37,00</strong> e a aula é de <strong>2h</strong>.</p>
-    <a href="https://wa.me/5553999246827?text=Fala%20Fred%2C%20quero%20garantir%20minha%20vaga%20na%20aula%20ao%20vivo." class="btn" target="_blank" rel="noopener" style="margin-top:28px;">
-      Garantir vaga
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-    </a>
+<section class="porque section-dark">
+  <div class="wrap porque-grid">
+    <div data-reveal>
+      <p class="eyebrow">Por que isso importa</p>
+      <h2>Ninguém bate meta todo mês por acaso</h2>
+      <p class="body-text" style="margin-top:20px;">Resultado consistente não vem de sorte, vem de time preparado. Quando só o dono se desenvolve e o time fica parado, a empresa cresce até onde o dono aguenta carregar sozinho. Quando o time inteiro treina junto, na mesma direção, o negócio destrava de verdade.</p>
+      <p class="body-text">Por isso treino tanto donos de empresa quanto colaboradores: marketing, vendas e produto são frentes que precisam evoluir juntas, o tempo todo, não só quando aparece um problema.</p>
+      <p class="callout">Treinamento constante não é custo. É o que sustenta performance alta mês após mês.</p>
+    </div>
+    <div class="porque-visual" data-reveal aria-hidden="true">
+      <svg viewBox="0 50 480 380">
+        <circle cx="240" cy="240" r="100" fill="var(--accent)" fill-opacity="0.1" stroke="var(--accent)" stroke-width="1.6"/>
+        <text x="240" y="233" font-family="Poppins" font-size="14" font-weight="700" letter-spacing="0.04em" fill="#fff" text-anchor="middle">SEUS</text>
+        <text x="240" y="253" font-family="Poppins" font-size="12" font-weight="700" letter-spacing="0.02em" fill="#fff" text-anchor="middle">RESULTADOS</text>
+
+        <g stroke="var(--accent)" stroke-opacity="0.5" stroke-width="1.1" stroke-dasharray="2 3">
+          <line x1="240" y1="140" x2="240" y2="100"/>
+          <line x1="326.6" y1="290" x2="361.2" y2="310"/>
+          <line x1="153.4" y1="290" x2="118.8" y2="310"/>
+        </g>
+        <g font-family="Poppins" font-size="13" font-weight="600" fill="var(--accent)">
+          <circle cx="240" cy="90" r="3" fill="var(--accent)"/>
+          <text x="240" y="76" text-anchor="middle">Marketing</text>
+          <circle cx="369.9" cy="315" r="3" fill="var(--accent)"/>
+          <text x="381.9" y="319" text-anchor="start">Vendas</text>
+          <circle cx="110.1" cy="315" r="3" fill="var(--accent)"/>
+          <text x="98.1" y="319" text-anchor="end">Produto</text>
+        </g>
+      </svg>
+    </div>
   </div>
 </section>
 
