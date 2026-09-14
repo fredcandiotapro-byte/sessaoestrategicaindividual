@@ -361,12 +361,6 @@
     font-weight:500;
     color:var(--ink-soft);
   }
-  .cta-row{
-    display:flex;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:16px;
-  }
   .live-meta{
     display:flex;
     flex-wrap:wrap;
@@ -379,8 +373,34 @@
     gap:10px;
   }
   .live-meta-item svg{width:24px;height:24px;color:var(--accent);flex:none;}
-  .live-meta-item span{font-size:1.15rem;font-weight:700;color:#fff;}
-  .cta-row .live-price{margin:0;}
+  .live-meta-item span{font-size:1.15rem;font-weight:700;color:var(--ink);}
+  .section-dark .live-meta-item span{color:#fff;}
+  .check-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .check-list li{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    font-size:0.95rem;
+    color:var(--ink);
+  }
+  .check-list .mark{
+    flex:none;
+    width:20px;height:20px;
+    border-radius:50%;
+    background:var(--accent);
+    color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:0.7rem;
+    font-weight:700;
+    margin-top:2px;
+  }
   .training-featured .btn-sm{margin-top:auto;align-self:flex-start;}
 
   /* ---------- CONTENT GROUPS (used inside Programa MVPRO) ---------- */
@@ -573,8 +593,31 @@
       <div class="formato-card">
         <span class="tag">Público</span>
         <h3>Programa MVPRO</h3>
-        <p>Um programa de <strong>4 semanas</strong>, ao vivo e online, pra você e seu time saírem com marketing, vendas e produto na mesma direção: como atrair, como vender e o que vender. Próxima turma inicia dia <strong>20/10</strong>.</p>
-        <div class="content-groups" style="margin-top:18px;">
+        <p>Um programa de <strong>4 semanas</strong>, ao vivo e online, pra você e seu time saírem com marketing, vendas e produto na mesma direção: como atrair, como vender e o que vender.</p>
+        <div class="live-meta" style="margin-top:20px;">
+          <div class="live-meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="16" y1="3" x2="16" y2="7"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>20/10</span>
+          </div>
+          <div class="live-meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+            <span>19h</span>
+          </div>
+          <div class="live-meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41 13.42 20.58a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82Z"/><circle cx="7" cy="7" r="1"/></svg>
+            <span>R$ 297,00</span>
+          </div>
+        </div>
+        <p class="body-text" style="margin-top:8px;">Pré-vendas até dia <strong>1/10</strong>.</p>
+        <ul class="check-list" style="margin-top:24px;">
+          <li><span class="mark">✓</span>4 semanas de treinamento ao vivo e online</li>
+          <li><span class="mark">✓</span>1 encontro individual comigo</li>
+          <li><span class="mark">✓</span>Materiais e frameworks práticos</li>
+          <li><span class="mark">✓</span>Aulas gravadas disponibilizadas</li>
+          <li><span class="mark">✓</span>Grupo de membros</li>
+          <li><span class="mark">✓</span>Suporte no WhatsApp durante o treinamento</li>
+        </ul>
+        <div class="content-groups" style="margin-top:24px;">
           <div class="content-group">
             <span class="content-group-label">Marketing</span>
             <ul class="tag-list">
@@ -601,13 +644,10 @@
             </ul>
           </div>
         </div>
-        <div class="cta-row">
-          <a href="https://wa.me/5553999246827?text=Fala%20Fred%2C%20quero%20me%20inscrever%20no%20Programa%20MVPro." class="btn btn-sm" target="_blank" rel="noopener">
-            Quero me inscrever
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </a>
-          <p class="live-price">R$ 297,00 <span>(pré-vendas até dia 1/10)</span></p>
-        </div>
+        <a href="https://fredcandiota.com.br/f/vKhAJQe" class="btn btn-sm" target="_blank" rel="noopener" style="margin-top:24px;">
+          Quero me inscrever
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
       </div>
       <div class="formato-card">
         <span class="tag">Empresarial</span>
