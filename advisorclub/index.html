@@ -514,25 +514,39 @@
     background:#fff;
   }
   .invest-box .eyebrow{justify-content:center;}
-  .invest-box .price{
-    font-size:2.6rem;
-    font-weight:800;
-    color:var(--ink);
-    margin:18px 0 6px;
+  .price-block{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:28px;
+    margin:26px 0 6px;
+    padding:26px 20px;
+    background:var(--surface);
+    border-radius:16px;
   }
-  .invest-box .price small{
-    display:block;
-    font-size:0.95rem;
-    font-weight:500;
-    color:var(--ink-soft);
-    margin-top:6px;
+  .price-option{display:flex;flex-direction:column;align-items:center;}
+  .price-value{font-size:1.9rem;font-weight:800;color:var(--ink);line-height:1.1;white-space:nowrap;}
+  .price-value small{font-size:1rem;font-weight:500;color:var(--ink-soft);}
+  .price-label{font-size:0.82rem;color:var(--ink-soft);margin-top:6px;font-weight:500;}
+  .price-divider{
+    position:relative;
+    width:1px;
+    height:44px;
+    background:var(--line);
+    flex:none;
   }
-  .invest-box .or{
-    font-size:0.85rem;
-    color:var(--ink-soft);
+  .price-divider span{
+    position:absolute;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    background:var(--surface);
+    padding:3px 8px;
+    border-radius:999px;
+    font-size:0.7rem;
+    font-weight:700;
     text-transform:uppercase;
-    letter-spacing:0.1em;
-    margin:6px 0;
+    letter-spacing:0.06em;
+    color:var(--ink-soft);
   }
   .invest-box .btn{margin-top:28px;}
 
@@ -591,6 +605,8 @@
     .sobre-grid{grid-template-columns:1fr;}
     .sobre-photo{max-width:220px;margin:0 auto;}
     .invest-box{padding:36px 26px;}
+    .price-block{flex-direction:column;gap:18px;}
+    .price-divider{width:80%;height:1px;}
     .moments-row--wide{grid-template-columns:repeat(2, 1fr);}
     .moments-row--tall{grid-template-columns:repeat(2, 1fr);}
   }
@@ -909,9 +925,17 @@
     <div class="invest-box">
       <p class="eyebrow">Investimento</p>
       <h2>12 meses de Advisor Club</h2>
-      <p class="price">R$ 997 <small>à vista</small></p>
-      <p class="or">ou</p>
-      <p class="price" style="font-size:1.6rem;">12x de R$ 102,31</p>
+      <div class="price-block">
+        <div class="price-option">
+          <span class="price-value">R$ 997</span>
+          <span class="price-label">à vista</span>
+        </div>
+        <div class="price-divider"><span>ou</span></div>
+        <div class="price-option">
+          <span class="price-value">12x <small>de</small> R$ 102,31</span>
+          <span class="price-label">no cartão</span>
+        </div>
+      </div>
       <p class="body-text" style="margin-top:20px;">Um único investimento para colocar sua empresa em uma rotina anual de Conhecimento + Conselho + Comunidade.</p>
       <p class="included-title">O que está incluído, durante 12 meses:</p>
       <ul class="check-list included-list">
