@@ -313,37 +313,6 @@
   }
 
   /* ---------- CYCLE ---------- */
-  .cycle{
-    margin-top:48px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:6px;
-  }
-  .cycle-step{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:4px;
-    padding:18px 32px;
-    border:1.5px solid var(--line);
-    border-radius:999px;
-    min-width:260px;
-    text-align:center;
-  }
-  .cycle-step strong{font-size:1.05rem;font-weight:700;color:var(--ink);}
-  .cycle-step span{font-size:0.88rem;color:var(--ink-soft);}
-  .cycle-arrow{
-    color:var(--accent);
-    font-size:1.4rem;
-    line-height:1;
-  }
-  .cycle-loop{
-    margin-top:10px;
-    font-size:0.9rem;
-    font-weight:600;
-    color:var(--accent-deep);
-  }
 
   /* ---------- DARK CARD GRID ---------- */
   .dark-grid{
@@ -533,7 +502,6 @@
     .two-col{grid-template-columns:1fr;}
     .sobre-grid{grid-template-columns:1fr;}
     .sobre-photo{max-width:220px;margin:0 auto;}
-    .cycle-step{min-width:0;width:100%;}
     .invest-box{padding:36px 26px;}
     .moments-row--wide{grid-template-columns:repeat(2, 1fr);}
     .moments-row--tall{grid-template-columns:repeat(2, 1fr);}
@@ -684,20 +652,23 @@
 
 <section>
   <div class="wrap" data-reveal>
-    <p class="eyebrow">O ciclo do Advisor Club</p>
-    <h2>Os encontros trabalham juntos</h2>
-    <div class="cycle">
-      <div class="cycle-step"><strong>Conhecimento</strong><span>A equipe aprende.</span></div>
-      <div class="cycle-arrow">↓</div>
-      <div class="cycle-step"><strong>Conselho</strong><span>Os donos analisam.</span></div>
-      <div class="cycle-arrow">↓</div>
-      <div class="cycle-step"><strong>Decisão</strong><span>Novas prioridades são definidas.</span></div>
-      <div class="cycle-arrow">↓</div>
-      <div class="cycle-step"><strong>Evolução</strong><span>A empresa melhora.</span></div>
-      <div class="cycle-arrow">↓</div>
-      <div class="cycle-step"><strong>Novo ciclo</strong><span>E o processo recomeça.</span></div>
+    <p class="eyebrow">Bastidores</p>
+    <h2>Bastidores do treinador</h2>
+    <div class="moments" style="margin-top:36px;">
+      <div class="moments-row moments-row--wide">
+        <div class="moments-cell moments-wide"><img src="moments-podcast.jpg" alt="Fred Candiota gravando o Fred Show Podcast" loading="lazy"></div>
+        <div class="moments-cell moments-wide"><img src="moments-stage1.jpg" alt="Fred Candiota palestrando no Summit" loading="lazy"></div>
+        <div class="moments-cell moments-wide"><img src="moments-apresentacao.jpg" alt="Fred Candiota apresentando sobre posicionamento" loading="lazy"></div>
+        <div class="moments-cell moments-wide"><img src="moments-stage2.jpg" alt="Fred Candiota palestrando em evento" loading="lazy"></div>
+      </div>
+      <div class="moments-row moments-row--tall">
+        <div class="moments-cell moments-tall"><img src="moments-premio.jpg" alt="Fred Candiota recebendo o prêmio de 100K com High Ticket" loading="lazy"></div>
+        <div class="moments-cell moments-tall"><img src="moments-palco.jpg" alt="Fred Candiota no palco recebendo reconhecimento" loading="lazy"></div>
+        <div class="moments-cell moments-tall"><img src="moments-gesto.jpg" alt="Fred Candiota apresentando para um grupo" loading="lazy"></div>
+        <div class="moments-cell moments-tall"><img src="moments-closeup.jpg" alt="Fred Candiota em um evento" loading="lazy"></div>
+        <div class="moments-cell moments-tall"><img src="moments-forum.jpg" alt="Fred Candiota palestrando em fórum" loading="lazy"></div>
+      </div>
     </div>
-    <p class="body-text" style="margin-top:36px;max-width:640px;">Porque uma empresa não precisa de uma estratégia que funcione uma vez. Ela precisa de uma cultura de melhoria contínua.</p>
   </div>
 </section>
 
@@ -813,24 +784,6 @@
       <p class="body-text" style="margin-top:16px;">É consultor da <strong>Dale Carnegie</strong>, a maior empresa de treinamentos em desenvolvimento pessoal do mundo, e está assumindo, com o mentor Leandro Oliveira, uma franquia Dale Carnegie na região de Bagé e Livramento. Soma mais de <strong>15 empresas recorrentes em consultoria</strong>, com recordes de vendas em pouco tempo. É carnegiano, se formando na turma 62 do Dale Carnegie Course, e está em treinamento pelo Instituto Eneagrama.</p>
       <p class="body-text" style="margin-top:16px;">Em 2025, fez parte do time da <strong>Impora Company</strong>, um escritório de BPO Financeiro, e junto com a equipe conquistou o prêmio de <strong>maior escritório de BPO Financeiro do Rio Grande do Sul</strong> e o <strong>segundo lugar em expansão empresarial no Brasil</strong>, prêmio de quem mais trouxe clientes para dentro da base.</p>
       <p class="body-text" style="margin-top:16px;">Também apresenta o <strong>Fred Show Podcast</strong>, com todos os episódios disponíveis no YouTube.</p>
-    </div>
-  </div>
-  <div class="wrap">
-    <div class="moments" data-reveal>
-      <p class="eyebrow">Bastidores</p>
-      <div class="moments-row moments-row--wide">
-        <div class="moments-cell moments-wide"><img src="moments-podcast.jpg" alt="Fred Candiota gravando o Fred Show Podcast" loading="lazy"></div>
-        <div class="moments-cell moments-wide"><img src="moments-stage1.jpg" alt="Fred Candiota palestrando no Summit" loading="lazy"></div>
-        <div class="moments-cell moments-wide"><img src="moments-apresentacao.jpg" alt="Fred Candiota apresentando sobre posicionamento" loading="lazy"></div>
-        <div class="moments-cell moments-wide"><img src="moments-stage2.jpg" alt="Fred Candiota palestrando em evento" loading="lazy"></div>
-      </div>
-      <div class="moments-row moments-row--tall">
-        <div class="moments-cell moments-tall"><img src="moments-premio.jpg" alt="Fred Candiota recebendo o prêmio de 100K com High Ticket" loading="lazy"></div>
-        <div class="moments-cell moments-tall"><img src="moments-palco.jpg" alt="Fred Candiota no palco recebendo reconhecimento" loading="lazy"></div>
-        <div class="moments-cell moments-tall"><img src="moments-gesto.jpg" alt="Fred Candiota apresentando para um grupo" loading="lazy"></div>
-        <div class="moments-cell moments-tall"><img src="moments-closeup.jpg" alt="Fred Candiota em um evento" loading="lazy"></div>
-        <div class="moments-cell moments-tall"><img src="moments-forum.jpg" alt="Fred Candiota palestrando em fórum" loading="lazy"></div>
-      </div>
     </div>
   </div>
 </section>
