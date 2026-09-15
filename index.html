@@ -454,6 +454,14 @@
     color:var(--ink);
     font-weight:600;
   }
+  .moments-row{display:grid;gap:14px;}
+  .moments-row--wide{grid-template-columns:repeat(4, 1fr);margin-bottom:14px;}
+  .moments-row--tall{grid-template-columns:repeat(5, 1fr);}
+  .moments-cell{border-radius:16px;overflow:hidden;}
+  .moments-cell.moments-wide{aspect-ratio:3/2;}
+  .moments-cell.moments-tall{aspect-ratio:4/5;}
+  .moments-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;}
+  .moments-cell:hover img{transform:scale(1.05);}
 
   /* ---------- SECTION: CTA FINAL ---------- */
   .cta-final{
@@ -522,6 +530,8 @@
     .formatos-grid{grid-template-columns:1fr;}
     .sobre-grid{grid-template-columns:1fr;}
     .sobre-photo{max-width:220px;margin:0 auto;}
+    .moments-row--wide{grid-template-columns:repeat(2, 1fr);}
+    .moments-row--tall{grid-template-columns:repeat(2, 1fr);}
   }
 </style>
 </head>
@@ -672,6 +682,27 @@
         Conhecer o Advisor Club
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="moments" data-reveal>
+      <p class="eyebrow">Bastidores</p>
+      <div class="moments-row moments-row--wide">
+        <div class="moments-cell moments-wide"><img src="moments-podcast.jpg" alt="Fred Candiota gravando o Fred Show Podcast" loading="lazy"></div>
+        <div class="moments-cell moments-wide"><img src="moments-stage1.jpg" alt="Fred Candiota palestrando no Summit" loading="lazy"></div>
+        <div class="moments-cell moments-wide"><img src="moments-apresentacao.jpg" alt="Fred Candiota apresentando sobre posicionamento" loading="lazy"></div>
+        <div class="moments-cell moments-wide"><img src="moments-stage2.jpg" alt="Fred Candiota palestrando em evento" loading="lazy"></div>
+      </div>
+      <div class="moments-row moments-row--tall">
+        <div class="moments-cell moments-tall"><img src="moments-premio.jpg" alt="Fred Candiota recebendo o prêmio de 100K com High Ticket" loading="lazy"></div>
+        <div class="moments-cell moments-tall"><img src="moments-palco.jpg" alt="Fred Candiota no palco recebendo reconhecimento" loading="lazy"></div>
+        <div class="moments-cell moments-tall"><img src="moments-gesto.jpg" alt="Fred Candiota apresentando para um grupo" loading="lazy"></div>
+        <div class="moments-cell moments-tall"><img src="moments-closeup.jpg" alt="Fred Candiota em um evento" loading="lazy"></div>
+        <div class="moments-cell moments-tall"><img src="moments-forum.jpg" alt="Fred Candiota palestrando em fórum" loading="lazy"></div>
+      </div>
     </div>
   </div>
 </section>
