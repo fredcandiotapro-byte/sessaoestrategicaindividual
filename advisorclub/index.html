@@ -440,6 +440,27 @@
   .testimonial-link svg{width:13px;height:13px;transition:transform .18s ease;}
   .testimonial-link:hover svg{transform:translateX(3px);}
 
+  /* ---------- TEXT TESTIMONIALS (orange) ---------- */
+  .testimonial-text-section{background:var(--accent);}
+  .testimonial-text-section h2{
+    color:#fff;
+    text-align:center;
+    max-width:720px;
+    margin:0 auto 40px;
+  }
+  .testimonial-text-grid{
+    columns:3;
+    column-gap:20px;
+  }
+  .testimonial-text-grid img{
+    width:100%;
+    display:block;
+    margin-bottom:20px;
+    border-radius:14px;
+    break-inside:avoid;
+    box-shadow:0 14px 30px -16px rgba(0,0,0,0.35);
+  }
+
   /* ---------- CHECK / CROSS LISTS ---------- */
   .check-list, .cross-list{
     list-style:none;
@@ -627,6 +648,7 @@
     .dark-grid{grid-template-columns:1fr;}
     .two-col{grid-template-columns:1fr;}
     .testimonial-grid{grid-template-columns:repeat(2, 1fr);}
+    .testimonial-text-grid{columns:1;}
     .sobre-grid{grid-template-columns:1fr;}
     .sobre-photo{max-width:220px;margin:0 auto;}
     .invest-box{padding:36px 26px;}
@@ -903,6 +925,19 @@
         </a>
         <a href="https://www.instagram.com/reel/DZ0LvzcRfsc/?utm_source=ig_web_copy_link" target="_blank" rel="noopener" class="testimonial-link">Assista na íntegra<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial-text-section">
+  <div class="wrap" data-reveal>
+    <h2>Depoimentos de quem participa de outros treinamentos</h2>
+    <div class="testimonial-text-grid">
+      <img src="depoimento-texto1.jpg" alt="Depoimento de aluno sobre os treinamentos de Fred Candiota" loading="lazy">
+      <img src="depoimento-texto2.jpg" alt="Depoimento de aluno sobre os treinamentos de Fred Candiota" loading="lazy">
+      <img src="depoimento-texto3.jpg" alt="Depoimento de aluno sobre os treinamentos de Fred Candiota" loading="lazy">
+      <img src="depoimento-texto4.jpg" alt="Depoimento de aluno sobre os treinamentos de Fred Candiota" loading="lazy">
+      <img src="depoimento-texto5.jpg" alt="Depoimento de aluno sobre os treinamentos de Fred Candiota" loading="lazy">
     </div>
   </div>
 </section>
